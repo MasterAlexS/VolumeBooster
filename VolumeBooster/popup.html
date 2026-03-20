@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="title-group">
+        <h2>Volume Booster</h2>
+        <div id="activeTabInfo" class="tab-info">Loading...</div>
+      </div>
+      <div class="header-controls">
+        <button id="themeToggle" class="icon-btn" title="Toggle Light/Dark Mode">🌓</button>
+        <label class="switch" title="Toggle Boost ON/OFF">
+          <input type="checkbox" id="masterToggle">
+          <span class="slider round"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="limit-toggle-group">
+      <span class="label">Standard (600%)</span>
+      <label class="switch small" title="Toggle 1000% Extreme Mode">
+        <input type="checkbox" id="limitToggle">
+        <span class="slider round"></span>
+      </label>
+      <span class="label extreme">Extreme (1000%)</span>
+    </div>
+
+    <div class="slider-wrapper">
+      <div id="volumeValue" class="glow-green">100%</div>
+      <input type="range" id="volumeSlider" min="0" max="600" step="10" value="100">
+    </div>
+
+    <div class="button-group">
+      <button id="resetBtn" title="Set to 100%">100%</button>
+      <button id="applyLastBtn">Apply Last: 100%</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

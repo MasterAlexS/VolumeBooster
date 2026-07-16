@@ -1,6 +1,6 @@
 # Volume Booster 🔊🚀
 
-A powerful, lightweight, and privacy-focused volume booster extension for **Firefox**. Built with Manifest V3 and the Web Audio API, it allows you to amplify your browser's audio up to **1000%** with per-tab persistence.
+A powerful, lightweight, and strictly privacy-focused volume booster extension for **Mozilla Firefox** and **Google Chrome**. Built natively with Manifest V3 and the Web Audio API, it allows you to amplify your browser's audio up to **1000%** with per-tab persistence and absolute zero background resource drain.
 
 ---
 
@@ -9,42 +9,41 @@ A powerful, lightweight, and privacy-focused volume booster extension for **Fire
 * **Two Boosting Modes:**
     * 🟢 **Standard Mode:** Boost up to **600%** (Safe, high-quality amplification).
     * 🔴 **Extreme Mode:** Unlock the limit up to **1000%** for those ultra-quiet videos.
+* **Smart Audio Radar (CPU Optimized):** Automatically detects new videos dynamically loaded on the page (e.g., scrolling on Facebook/YouTube). When the boost is disabled, the radar completely shuts down to ensure **0% CPU usage**.
+* **Zero Memory Leaks:** The background service worker actively monitors closed tabs and purges leftover data to keep your browser's memory sparkling clean.
 * **Per-Tab Memory:** The extension remembers your volume settings for each specific tab, even after a page refresh or navigation.
 * **Dynamic UI:**
     * **Glow Effect:** Visual feedback through a glowing percentage indicator that changes color based on the boost level.
     * **Theme Support:** Manual toggle for **Dark Mode** (Default) and **Light Mode**, saved to your preferences.
-* **Smart "Apply Last":** One-click button to apply the last used volume level globally.
-* **Clean Architecture:** Written in vanilla JavaScript (no frameworks) using the Web Audio API for low-latency, high-fidelity sound manipulation.
-* **Privacy First:** No tracking, no data collection, and no external server calls.
+* **Cross-Browser Native:** Fully styled and tested to look and perform identically on both Firefox and Chromium-based browsers (Chrome, Edge, Brave, ...).
+* **Privacy First:** No tracking, no data collection, and no external server calls. Only minimal permissions used.
 
 ---
 
 ## 🛠 Installation
 
-Since this extension is optimized for Firefox, you can install it manually:
+Because this extension is cross-browser compatible, you can install it manually on either Firefox or Chrome:
 
-### **Method 1: Permanent Installation** (Skip to step 4 if you downloaded the .xpi file)
-1.  Download the repository as a ZIP.
-2.  Extract the files and compress the contents (including `manifest.json` and the `icons` folder) into a new `.zip` file.
-3.  Rename the file extension from `.zip` to `.xpi`.
-4.  In Firefox, go to `about:config` and set `xpinstall.signatures.required` to `false`.
-5.  Go to `about:addons`, click the gear icon ⚙️, and select **"Install Add-on From File..."**.
-6.  Select your `.xpi` file.
+### **Mozilla Firefox**
+1. Go to `about:debugging#/runtime/this-firefox`.
+2. Click **Load Temporary Add-on...**.
+3. Select the `manifest.json` file from the extracted project folder.
+*(Note: For permanent Firefox installation, you must zip the files into an `.xpi` format, go to `about:config`, set `xpinstall.signatures.required` to `false`, and install it via `about:addons` > Install Add-on From File).*
 
-### **Method 2: Temporary (Developer Mode)**
-1.  Go to `about:debugging#/runtime/this-firefox`.
-2.  Click **"Load Temporary Add-on..."**.
-3.  Select the `manifest.json` file from the project folder.
+### **Google Chrome / Microsoft Edge / Brave / ...**
+1. Download the repository as a ZIP and extract it to a folder.
+2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`).
+3. Turn on **Developer mode** (usually a toggle in the top-right corner).
+4. Click **Load unpacked** and select the folder you extracted in step 1.
 
 ---
 
 ## 🔒 Permissions Explained
 
-To provide reliable audio boosting, this extension requires:
-* **`scripting`**: To inject the audio processing engine into the webpage.
-* **`<all_urls>`**: To detect and capture audio/video elements on any site you visit.
-* **`storage`**: To remember your theme preference and "Apply Last" volume settings.
-* **`tabs`**: To manage volume levels independently for each tab.
+To provide reliable audio boosting while maintaining strict privacy, this extension requires only the absolute minimum permissions:
+* **`activeTab`**: To identify the specific tab you want to boost when you open the popup.
+* **`storage`**: To remember your theme preference and volume settings across sessions.
+* **Host Permission (`<all_urls>`)**: Strictly used to inject the audio processing script into the webpage so it can locate and amplify the `<video>` or `<audio>` elements.
 
 ---
 

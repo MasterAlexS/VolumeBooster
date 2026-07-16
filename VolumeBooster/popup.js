@@ -1,3 +1,4 @@
+globalThis.browser = globalThis.browser || chrome;
 document.addEventListener("DOMContentLoaded", async () => {
   const masterToggle = document.getElementById("masterToggle");
   const limitToggle = document.getElementById("limitToggle");
@@ -10,6 +11,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const tabs = await browser.tabs.query({ active: true, currentWindow: true });
   const currentTab = tabs[0];
+  
+  if (!currentTab) {
+    activeTabInfo.textContent = "Error: No active tab found";
+    return;
+  }
   const tabId = currentTab.id;
 
   try {
@@ -33,8 +39,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   
   updateUIText();
 
-  function updateUIText() {
-    const currentVal = parseInt(volumeSlider.value);
+  function updateUIText(val = null) {
+    const currentVal = val !== null ? val : parseInt(volumeSlider.value, 10);
     volumeValue.textContent = `${currentVal}%`;
     
     if (currentVal > 600) {
@@ -86,12 +92,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     browser.storage.local.set({ themePreference: isLightMode ? "light" : "dark" });
   });
 
-  volumeSlider.addEventListener("input", () => {
-    masterToggle.checked = true;
+  volumeSlider.addEventListener("input", async () => {
+    const currentVol = parseInt(volumeSlider.value, 10);
+    
+    masterToggle.checked = (currentVol !== 100);
+    updateUIText(currentVol);
+    try {
+      await browser.tabs.sendMessage(tabId, {
+        action: "updateVolume",
+        volume: currentVol,
+        enabled: masterToggle.checked
+      });
+    } catch (err) {}
+  });
+
+  volumeSlider.addEventListener("change", () => {
     syncState();
   });
 
-  masterToggle.addEventListener("change", syncState);
+  masterToggle.addEventListener("change", () => {
+    if (parseInt(volumeSlider.value, 10) === 100) {
+      masterToggle.checked = false;
+    }
+    syncState();
+  });
 
   limitToggle.addEventListener("change", () => {
     const isExtreme = limitToggle.checked;
@@ -109,13 +133,14 @@ document.addEventListener("DOMContentLoaded", async () => {
       volumeSlider.max = "1000";
     }
     volumeSlider.value = globalLastVolume;
-    masterToggle.checked = true;
+    masterToggle.checked = (globalLastVolume !== 100);
     syncState();
   });
 
   resetBtn.addEventListener("click", () => {
     volumeSlider.value = "100";
-    masterToggle.checked = true;
+    masterToggle.checked = false;
     syncState();
   });
 });
+

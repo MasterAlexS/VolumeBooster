@@ -1,3 +1,4 @@
+globalThis.browser = globalThis.browser || chrome;
 let audioCtx = null;
 let gainNode = null;
 let connectedElements = new WeakSet();
@@ -14,11 +15,16 @@ function initAudioContext() {
 
 function updateGain() {
   if (!gainNode) return;
+  if (audioCtx && audioCtx.state === 'suspended') {
+    audioCtx.resume().catch(() => { });
+  }
   gainNode.gain.value = isBoostEnabled ? (currentVolume / 100) : 1;
 }
 
 function hookMediaElements() {
   const mediaElements = document.querySelectorAll('video, audio');
+  if (mediaElements.length === 0) return;
+
   mediaElements.forEach(el => {
     if (!connectedElements.has(el)) {
       initAudioContext();
@@ -33,29 +39,61 @@ function hookMediaElements() {
   });
 }
 
+let hookTimeout;
+let observerInstance = null;
+
+function startObserver() {
+  if (!observerInstance && document.body) {
+    observerInstance = new MutationObserver(() => {
+      clearTimeout(hookTimeout);
+      hookTimeout = setTimeout(() => {
+        hookMediaElements();
+      }, 300);
+    });
+    observerInstance.observe(document.body, { childList: true, subtree: true });
+  }
+}
+
+function stopObserver() {
+  if (observerInstance) {
+    observerInstance.disconnect();
+    observerInstance = null;
+  }
+}
+
 async function autoInit() {
   const settings = await browser.runtime.sendMessage({ action: "getContentSettings" });
-  
+
   if (settings && settings.enabled) {
     currentVolume = settings.volume;
     isBoostEnabled = true;
     initAudioContext();
     hookMediaElements();
     updateGain();
+    startObserver();
   }
 }
-
-const observer = new MutationObserver(() => hookMediaElements());
-observer.observe(document.body, { childList: true, subtree: true });
 
 browser.runtime.onMessage.addListener((message) => {
   if (message.action === "updateVolume") {
     currentVolume = message.volume;
     isBoostEnabled = message.enabled;
-    initAudioContext();
-    hookMediaElements();
-    updateGain();
+
+    if (isBoostEnabled) {
+      initAudioContext();
+      hookMediaElements();
+      updateGain();
+      startObserver();
+    } else {
+      updateGain();
+      stopObserver();
+    }
   }
 });
 
-autoInit();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", autoInit);
+} else {
+  autoInit();
+}
+

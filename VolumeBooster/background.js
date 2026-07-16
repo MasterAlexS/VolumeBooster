@@ -1,7 +1,14 @@
+globalThis.browser = globalThis.browser || chrome;
 browser.runtime.onStartup.addListener(async () => {
   const allData = await browser.storage.local.get();
   const keysToRemove = Object.keys(allData).filter(key => key.startsWith("tab_"));
-  await browser.storage.local.remove(keysToRemove);
+  if (keysToRemove.length > 0) {
+    await browser.storage.local.remove(keysToRemove);
+  }
+});
+
+browser.tabs.onRemoved.addListener(async (tabId) => {
+  await browser.storage.local.remove(`tab_${tabId}`);
 });
 
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
@@ -16,6 +23,8 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
       if (state) {
         sendResponse(state);
         updateTabBadge(tabId, state.enabled, state.volume);
+      } else {
+        sendResponse({ enabled: false, volume: 100 });
       }
     });
     return true;
@@ -34,3 +43,4 @@ function updateTabBadge(tabId, enabled, volume) {
     browser.action.setBadgeText({ text: "", tabId: tabId });
   }
 }
+

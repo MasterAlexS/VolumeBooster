@@ -1,0 +1,18 @@
+﻿{
+  "extName": { "message": "Amplificator Volum" },
+  "extDesc": { "message": "Mărește volumul tab-ului de la 600% la 1000% folosind modurile Standard și Extrem. Amplificare audio sigură cu Web Audio API și salvarea stării." },
+  "standardMode": { "message": "Standard" },
+  "extremeMode": { "message": "Extrem" },
+  "resetBtn": { "message": "100%" },
+  "applyLastBtn": { "message": "Aplică Ultimul" },
+  "loading": { "message": "Se încarcă..." },
+  "activeOn": { "message": "Activ pe: " },
+  "activeCurrent": { "message": "Activ pe: pagina curentă" },
+  "errorNoTab": { "message": "Eroare: Niciun tab activ găsit" },
+  "themeToggleTitle": { "message": "Comută Mod Luminos/Întunecat" },
+  "boostToggleTitle": { "message": "Pornește/Oprește Amplificarea" },
+  "extremeToggleTitle": { "message": "Comută Modul Extrem 1000%" },
+  "resetBtnTitle": { "message": "Setați la 100%" }, 
+  "langSelectTitle": { "message": "Schimbă Limba" }
+}
+

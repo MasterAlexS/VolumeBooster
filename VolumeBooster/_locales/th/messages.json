@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "บูสเตอร์ระดับเสียง" }, "extDesc": { "message": "เพิ่มระดับเสียง" }, "standardMode": { "message": "มาตรฐาน" }, "extremeMode": { "message": "สุดขีด" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "ใช้ล่าสุด" }, "loading": { "message": "กำลังโหลด..." }, "activeOn": { "message": "ใช้งานที่: " }, "activeCurrent": { "message": "ใช้งานที่: หน้าปัจจุบัน" }, "errorNoTab": { "message": "ข้อผิดพลาด: ไม่พบแท็บ" }, "themeToggleTitle": { "message": "โหมดมืด/สว่าง" }, "boostToggleTitle": { "message": "เปิด/ปิด" }, "extremeToggleTitle": { "message": "โหมดสุดขีด" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "เปลี่ยนภาษา" } }
+

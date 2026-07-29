@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Ojačevalnik Zvoka" }, "extDesc": { "message": "Povečajte glasnost." }, "standardMode": { "message": "Standardno" }, "extremeMode": { "message": "Ekstremno" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Uporabi Zadnje" }, "loading": { "message": "Nalaganje..." }, "activeOn": { "message": "Aktivno na: " }, "activeCurrent": { "message": "Aktivno na: trenutni strani" }, "errorNoTab": { "message": "Napaka: Ni aktivnega zavihka" }, "themeToggleTitle": { "message": "Svetli/Temni način" }, "boostToggleTitle": { "message": "VKLOP/IZKLOP" }, "extremeToggleTitle": { "message": "Ekstremni način" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Spremeni jezik" } }
+

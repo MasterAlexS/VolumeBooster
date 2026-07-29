@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Garso stiprintuvas" }, "extDesc": { "message": "Padidinkite garsumą." }, "standardMode": { "message": "Standartinis" }, "extremeMode": { "message": "Ekstremalus" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Taikyti paskutinį" }, "loading": { "message": "Kraunama..." }, "activeOn": { "message": "Aktyvus: " }, "activeCurrent": { "message": "Aktyvus: dabartinis puslapis" }, "errorNoTab": { "message": "Klaida: Nėra aktyvaus skirtuko" }, "themeToggleTitle": { "message": "Šviesus/Tamsus režimas" }, "boostToggleTitle": { "message": "Įjungti/Išjungti" }, "extremeToggleTitle": { "message": "Ekstremalus režimas" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Pakeisti kalbą" } }
+

@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Helivõimendi" }, "extDesc": { "message": "Suurendage helitugevust." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Ekstreemne" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Rakenda viimane" }, "loading": { "message": "Laadimine..." }, "activeOn": { "message": "Aktiivne: " }, "activeCurrent": { "message": "Aktiivne: praegune leht" }, "errorNoTab": { "message": "Viga: Aktiivset vahekaarti pole" }, "themeToggleTitle": { "message": "Hele/Tume režiim" }, "boostToggleTitle": { "message": "Sisse/Välja" }, "extremeToggleTitle": { "message": "Ekstreemne režiim" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Muuda keelt" } }
+

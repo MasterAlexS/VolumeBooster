@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "تقویت‌کننده صدا" }, "extDesc": { "message": "صدا را افزایش دهید." }, "standardMode": { "message": "استاندارد" }, "extremeMode": { "message": "شدید" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "اعمال آخرین" }, "loading": { "message": "در حال بارگذاری..." }, "activeOn": { "message": "فعال در: " }, "activeCurrent": { "message": "فعال در: صفحه فعلی" }, "errorNoTab": { "message": "خطا: برگه فعالی یافت نشد" }, "themeToggleTitle": { "message": "حالت تاریک/روشن" }, "boostToggleTitle": { "message": "روشن/خاموش" }, "extremeToggleTitle": { "message": "حالت شدید" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "تغییر زبان" } }
+

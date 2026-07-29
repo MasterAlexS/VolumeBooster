@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Volume Booster" }, "extDesc": { "message": "Dagdagan ang volume." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Extreme" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Ilapat ang huli" }, "loading": { "message": "Naglo-load..." }, "activeOn": { "message": "Aktibo sa: " }, "activeCurrent": { "message": "Aktibo sa: kasalukuyang pahina" }, "errorNoTab": { "message": "Error: Walang aktibong tab" }, "themeToggleTitle": { "message": "I-toggle ang Light/Dark" }, "boostToggleTitle": { "message": "I-toggle ang Boost" }, "extremeToggleTitle": { "message": "Extreme Mode" }, "resetBtnTitle": { "message": "Itakda sa 100%" }, 
+  "langSelectTitle": { "message": "Palitan ang Wika" } }
+

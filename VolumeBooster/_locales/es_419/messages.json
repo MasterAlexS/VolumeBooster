@@ -1,0 +1,18 @@
+﻿{
+  "extName": { "message": "Amplificador de Volumen" },
+  "extDesc": { "message": "Aumenta el volumen de la pestaña del 600% al 1000% usando los modos Estándar y Extremo. Amplificación de audio segura con Web Audio API y guardado de estado." },
+  "standardMode": { "message": "Estándar" },
+  "extremeMode": { "message": "Extremo" },
+  "resetBtn": { "message": "100%" },
+  "applyLastBtn": { "message": "Aplicar Último" },
+  "loading": { "message": "Cargando..." },
+  "activeOn": { "message": "Activo en: " },
+  "activeCurrent": { "message": "Activo en: página actual" },
+  "errorNoTab": { "message": "Error: No se encontró pestaña activa" },
+  "themeToggleTitle": { "message": "Alternar Modo Claro/Oscuro" },
+  "boostToggleTitle": { "message": "Alternar Amplificación (ON/OFF)" },
+  "extremeToggleTitle": { "message": "Alternar Modo Extremo 1000%" },
+  "resetBtnTitle": { "message": "Establecer al 100%" }, 
+  "langSelectTitle": { "message": "Cambiar Idioma" }
+}
+

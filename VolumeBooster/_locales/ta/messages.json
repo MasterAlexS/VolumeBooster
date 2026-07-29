@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "ஒலி பெருக்கி" }, "extDesc": { "message": "ஒலியை அதிகரிக்கவும்." }, "standardMode": { "message": "வழக்கமான" }, "extremeMode": { "message": "கடுமையான" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "கடைசியாகப் பயன்படுத்து" }, "loading": { "message": "ஏற்றுகிறது..." }, "activeOn": { "message": "செயலில்: " }, "activeCurrent": { "message": "செயலில்: தற்போதைய பக்கம்" }, "errorNoTab": { "message": "பிழை: செயலில் உள்ள தாவல் இல்லை" }, "themeToggleTitle": { "message": "டார்க்/லைட் மோட்" }, "boostToggleTitle": { "message": "பூஸ்ட் ஆன்/ஆஃப்" }, "extremeToggleTitle": { "message": "கடுமையான மோட்" }, "resetBtnTitle": { "message": "100% ஆக அமை" }, 
+  "langSelectTitle": { "message": "மொழியை மாற்று" } }
+

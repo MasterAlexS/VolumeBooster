@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "音量放大器" }, "extDesc": { "message": "使用标准和极限模式将标签声音放大 600% 到 1000%。" }, "standardMode": { "message": "标准" }, "extremeMode": { "message": "极限" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "应用上一次" }, "loading": { "message": "加载中..." }, "activeOn": { "message": "激活于: " }, "activeCurrent": { "message": "激活于: 当前页面" }, "errorNoTab": { "message": "错误：未找到活动标签" }, "themeToggleTitle": { "message": "切换明暗模式" }, "boostToggleTitle": { "message": "开启/关闭音量放大" }, "extremeToggleTitle": { "message": "开启/关闭 1000% 极限模式" }, "resetBtnTitle": { "message": "设置为 100%" }, 
+  "langSelectTitle": { "message": "更改語言" } }
+

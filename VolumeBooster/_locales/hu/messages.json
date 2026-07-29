@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Hangerőnövelő" }, "extDesc": { "message": "Növelje a hangerőt." }, "standardMode": { "message": "Normál" }, "extremeMode": { "message": "Extrém" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Utolsó alkalmazása" }, "loading": { "message": "Betöltés..." }, "activeOn": { "message": "Aktív itt: " }, "activeCurrent": { "message": "Aktív itt: jelenlegi oldal" }, "errorNoTab": { "message": "Hiba: Nincs aktív lap" }, "themeToggleTitle": { "message": "Sötét/Világos mód" }, "boostToggleTitle": { "message": "Be/Ki kapcsolás" }, "extremeToggleTitle": { "message": "Extrém mód" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Nyelv megváltoztatása" } }
+

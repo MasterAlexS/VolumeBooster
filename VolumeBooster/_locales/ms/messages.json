@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Penguat Kelantangan" }, "extDesc": { "message": "Tingkatkan kelantangan." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Ekstrem" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Guna Terakhir" }, "loading": { "message": "Memuatkan..." }, "activeOn": { "message": "Aktif pada: " }, "activeCurrent": { "message": "Aktif pada: halaman semasa" }, "errorNoTab": { "message": "Ralat: Tiada tab aktif" }, "themeToggleTitle": { "message": "Mod Cerah/Gelap" }, "boostToggleTitle": { "message": "Hidup/Mati" }, "extremeToggleTitle": { "message": "Mod Ekstrem" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Tukar Bahasa" } }
+

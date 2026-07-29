@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Skaļuma palielinātājs" }, "extDesc": { "message": "Palieliniet skaļumu." }, "standardMode": { "message": "Standarta" }, "extremeMode": { "message": "Ekstrēms" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Lietot pēdējo" }, "loading": { "message": "Ielādē..." }, "activeOn": { "message": "Aktīvs: " }, "activeCurrent": { "message": "Aktīvs: pašreizējā lapa" }, "errorNoTab": { "message": "Kļūda: Nav aktīvas cilnes" }, "themeToggleTitle": { "message": "Gaišais/Tumšais režīms" }, "boostToggleTitle": { "message": "Ieslēgt/Izslēgt" }, "extremeToggleTitle": { "message": "Ekstrēmais režīms" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Mainīt valodu" } }
+

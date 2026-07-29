@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Penguat Volume" }, "extDesc": { "message": "Tingkatkan volume." }, "standardMode": { "message": "Standar" }, "extremeMode": { "message": "Ekstrem" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Terapkan Terakhir" }, "loading": { "message": "Memuat..." }, "activeOn": { "message": "Aktif di: " }, "activeCurrent": { "message": "Aktif di: halaman saat ini" }, "errorNoTab": { "message": "Kesalahan: Tidak ada tab aktif" }, "themeToggleTitle": { "message": "Mode Terang/Gelap" }, "boostToggleTitle": { "message": "Aktifkan/Nonaktifkan" }, "extremeToggleTitle": { "message": "Mode Ekstrem" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Ubah Bahasa" } }
+

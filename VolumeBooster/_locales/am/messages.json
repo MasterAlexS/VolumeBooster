@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "የድምጽ ማጉያ" }, "extDesc": { "message": "ድምጽን ይጨምሩ።" }, "standardMode": { "message": "መደበኛ" }, "extremeMode": { "message": "ከፍተኛ" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "የመጨረሻውን ተግብር" }, "loading": { "message": "በመጫን ላይ..." }, "activeOn": { "message": "ንቁ በ: " }, "activeCurrent": { "message": "ንቁ በ: የአሁኑ ገጽ" }, "errorNoTab": { "message": "ስህተት: ምንም ንቁ ትር የለም" }, "themeToggleTitle": { "message": "ብርሃን/ጨለማ ሁነታ ቀይር" }, "boostToggleTitle": { "message": "ማጉላትን አብራ/አጥፋ" }, "extremeToggleTitle": { "message": "1000% ከፍተኛ ሁነታ ቀይር" }, "resetBtnTitle": { "message": "ወደ 100% አዘጋጅ" }, 
+  "langSelectTitle": { "message": "ቋንቋ ቀይር" } }
+

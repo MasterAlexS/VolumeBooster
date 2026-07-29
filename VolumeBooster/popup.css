@@ -283,3 +283,27 @@ input[type=range]::-moz-range-thumb {
 #applyLastBtn {
   flex: 0.7;
 }
+.footer-controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 4px;
+}
+
+.lang-select {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 13px;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  text-align-last: center;
+  transition: all 0.2s;
+}
+
+.lang-select:hover {
+  background-color: var(--btn-hover);
+}
+

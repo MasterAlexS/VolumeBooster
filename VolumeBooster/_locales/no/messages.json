@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Volumforsterker" }, "extDesc": { "message": "Øk volumet." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Ekstrem" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Bruk Siste" }, "loading": { "message": "Laster..." }, "activeOn": { "message": "Aktiv på: " }, "activeCurrent": { "message": "Aktiv på: nåværende side" }, "errorNoTab": { "message": "Feil: Ingen aktiv fane" }, "themeToggleTitle": { "message": "Lys/Mørk modus" }, "boostToggleTitle": { "message": "PÅ/AV" }, "extremeToggleTitle": { "message": "Ekstrem modus" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Change Language" } }
+

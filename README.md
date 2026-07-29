@@ -1,22 +1,23 @@
 # Volume Booster 🔊🚀
 
-A powerful, lightweight, and strictly privacy-focused volume booster extension for **Mozilla Firefox** and **Google Chrome**. Built natively with Manifest V3 and the Web Audio API, it allows you to amplify your browser's audio up to **1000%** with per-tab persistence and absolute zero background resource drain.
+A powerful, lightweight, and strictly privacy-focused volume booster extension for **Mozilla Firefox** and **Google Chrome**. Built natively with Manifest V3 and the Web Audio API, it allows you to amplify your browser's audio up to **1000%** with smart domain-based memory and absolute zero background resource drain.
 
 ---
 
 ## ✨ Features
 
+* **Universal Translation (56 Languages):** Full support for almost every major language worldwide. A custom-built manual language selector in the UI allows you to change the extension's language instantly on the fly, independent of your browser's language.
 * **Two Boosting Modes:**
     * 🟢 **Standard Mode:** Boost up to **600%** (Safe, high-quality amplification).
     * 🔴 **Extreme Mode:** Unlock the limit up to **1000%** for those ultra-quiet videos.
-* **Smart Audio Radar (CPU Optimized):** Automatically detects new videos dynamically loaded on the page (e.g., scrolling on Facebook/YouTube). When the boost is disabled, the radar completely shuts down to ensure **0% CPU usage**.
-* **Zero Memory Leaks:** The background service worker actively monitors closed tabs and purges leftover data to keep your browser's memory sparkling clean.
-* **Per-Tab Memory:** The extension remembers your volume settings for each specific tab, even after a page refresh or navigation.
+* **Smart Domain Memory:** The extension remembers your volume settings for specific websites (e.g., youtube.com) rather than per-tab. If you close a tab and come back later, your volume preferences remain intact.
+* **Iframe Support:** Seamlessly boosts audio for embedded video players (e.g., YouTube videos embedded on third-party blogs or news sites).
+* **Smart Audio Radar (CPU Optimized):** Automatically detects new videos dynamically loaded on the page. When the boost is disabled, the radar completely shuts down to ensure **0% CPU usage**.
 * **Dynamic UI:**
     * **Glow Effect:** Visual feedback through a glowing percentage indicator that changes color based on the boost level.
     * **Theme Support:** Manual toggle for **Dark Mode** (Default) and **Light Mode**, saved to your preferences.
 * **Cross-Browser Native:** Fully styled and tested to look and perform identically on both Firefox and Chromium-based browsers (Chrome, Edge, Brave, ...).
-* **Privacy First:** No tracking, no data collection, and no external server calls. Only minimal permissions used.
+* **Privacy First:** No tracking, no data collection, and no external server calls. See our [Privacy Policy](PRIVACY.md) for full details.
 
 ---
 
@@ -41,9 +42,9 @@ Because this extension is cross-browser compatible, you can install it manually 
 ## 🔒 Permissions Explained
 
 To provide reliable audio boosting while maintaining strict privacy, this extension requires only the absolute minimum permissions:
-* **`activeTab`**: To identify the specific tab you want to boost when you open the popup.
-* **`storage`**: To remember your theme preference and volume settings across sessions.
-* **Host Permission (`<all_urls>`)**: Strictly used to inject the audio processing script into the webpage so it can locate and amplify the `<video>` or `<audio>` elements.
+* **`activeTab`**: To identify the specific tab you want to boost when you open the popup and read the domain name for saving preferences locally.
+* **`storage`**: To remember your language, theme preference, and volume settings across sessions locally on your machine.
+* **Host Permission (`<all_urls>`)**: Strictly used to inject the audio processing script into the webpage (and its iframes) so it can locate and amplify the `<video>` or `<audio>` elements.
 
 ---
 

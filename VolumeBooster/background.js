@@ -7,10 +7,6 @@ browser.runtime.onStartup.addListener(async () => {
   }
 });
 
-browser.tabs.onRemoved.addListener(async (tabId) => {
-  await browser.storage.local.remove(`tab_${tabId}`);
-});
-
 browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "updateBadge") {
     updateTabBadge(message.tabId, message.enabled, message.volume);
@@ -18,8 +14,20 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
   else if (message.action === "getContentSettings") {
     const tabId = sender.tab.id;
-    browser.storage.local.get(`tab_${tabId}`).then(res => {
-      const state = res[`tab_${tabId}`];
+    let storageKey = `tab_${tabId}`;
+    try {
+      if (sender.url) {
+        const url = new URL(sender.url);
+        if (url.hostname) {
+          storageKey = `domain_${url.hostname}`;
+        }
+      }
+    } catch (e) {
+      // Keep fallback
+    }
+
+    browser.storage.local.get(storageKey).then(res => {
+      const state = res[storageKey];
       if (state) {
         sendResponse(state);
         updateTabBadge(tabId, state.enabled, state.volume);
@@ -43,4 +51,3 @@ function updateTabBadge(tabId, enabled, volume) {
     browser.action.setBadgeText({ text: "", tabId: tabId });
   }
 }
-

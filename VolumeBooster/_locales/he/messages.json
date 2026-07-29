@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "מגבר קול" }, "extDesc": { "message": "הגבר את עוצמת הקול." }, "standardMode": { "message": "רגיל" }, "extremeMode": { "message": "אקסטרים" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "החל אחרון" }, "loading": { "message": "טוען..." }, "activeOn": { "message": "פעיל ב: " }, "activeCurrent": { "message": "פעיל ב: דף נוכחי" }, "errorNoTab": { "message": "שגיאה: אין כרטיסייה פעילה" }, "themeToggleTitle": { "message": "מצב בהיר/כהה" }, "boostToggleTitle": { "message": "הפעל/כבה" }, "extremeToggleTitle": { "message": "מצב אקסטרים" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "שנה שפה" } }
+

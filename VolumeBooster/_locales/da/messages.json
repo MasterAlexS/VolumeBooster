@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Lydforstærker" }, "extDesc": { "message": "Øg fanevolumen fra 600% til 1000%." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Ekstrem" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Anvend Sidste" }, "loading": { "message": "Indlæser..." }, "activeOn": { "message": "Aktiv på: " }, "activeCurrent": { "message": "Aktiv på: nuværende side" }, "errorNoTab": { "message": "Fejl: Ingen aktiv fane fundet" }, "themeToggleTitle": { "message": "Skift Lys/Mørk Tilstand" }, "boostToggleTitle": { "message": "Skift Forstærkning TIL/FRA" }, "extremeToggleTitle": { "message": "Skift 1000% Ekstrem Tilstand" }, "resetBtnTitle": { "message": "Sæt til 100%" }, 
+  "langSelectTitle": { "message": "Skift sprog" } }
+

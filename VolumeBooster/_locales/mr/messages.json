@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "व्हॉल्यूम बूस्टर" }, "extDesc": { "message": "व्हॉल्यूम वाढवा." }, "standardMode": { "message": "प्रमाणित" }, "extremeMode": { "message": "अत्यंत" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "शेवटचे लागू करा" }, "loading": { "message": "लोड होत आहे..." }, "activeOn": { "message": "वर सक्रिय: " }, "activeCurrent": { "message": "वर सक्रिय: वर्तमान पृष्ठ" }, "errorNoTab": { "message": "त्रुटी: कोणताही सक्रिय टॅब नाही" }, "themeToggleTitle": { "message": "लाइट/डार्क मोड" }, "boostToggleTitle": { "message": "बूस्ट चालू/बंद" }, "extremeToggleTitle": { "message": "अत्यंत मोड" }, "resetBtnTitle": { "message": "100% सेट करा" }, 
+  "langSelectTitle": { "message": "भाषा बदला" } }
+

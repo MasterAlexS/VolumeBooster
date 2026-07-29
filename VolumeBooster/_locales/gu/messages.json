@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "વોલ્યુમ બૂસ્ટર" }, "extDesc": { "message": "વોલ્યુમ વધારો." }, "standardMode": { "message": "માનક" }, "extremeMode": { "message": "આત્યંતિક" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "છેલ્લું લાગુ કરો" }, "loading": { "message": "લોડ થઈ રહ્યું છે..." }, "activeOn": { "message": "પર સક્રિય: " }, "activeCurrent": { "message": "પર સક્રિય: વર્તમાન પૃષ્ઠ" }, "errorNoTab": { "message": "ભૂલ: કોઈ સક્રિય ટેબ નથી" }, "themeToggleTitle": { "message": "લાઇટ/ડાર્ક મોડ" }, "boostToggleTitle": { "message": "બૂસ્ટ ચાલુ/બંધ" }, "extremeToggleTitle": { "message": "આત્યંતિક મોડ" }, "resetBtnTitle": { "message": "100% સેટ કરો" }, 
+  "langSelectTitle": { "message": "ભાષા બદલો" } }
+

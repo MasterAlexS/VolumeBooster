@@ -1,0 +1,3 @@
+﻿{ "extName": { "message": "Zosilňovač Hlasitosti" }, "extDesc": { "message": "Zvýšte hlasitosť." }, "standardMode": { "message": "Štandardný" }, "extremeMode": { "message": "Extrémny" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Použiť Posledný" }, "loading": { "message": "Načítava sa..." }, "activeOn": { "message": "Aktívne na: " }, "activeCurrent": { "message": "Aktívne na: aktuálnej stránke" }, "errorNoTab": { "message": "Chyba: Žiadna aktívna karta" }, "themeToggleTitle": { "message": "Svetlý/Tmavý Režim" }, "boostToggleTitle": { "message": "ZAP/VYP" }, "extremeToggleTitle": { "message": "Extrémny Režim" }, "resetBtnTitle": { "message": "100%" }, 
+  "langSelectTitle": { "message": "Zmeniť jazyk" } }
+

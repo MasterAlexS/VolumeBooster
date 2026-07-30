@@ -43,8 +43,20 @@ function updateTabBadge(tabId, enabled, volume) {
   if (enabled) {
     let text = volume >= 1000 ? "1K" : volume.toString();
     browser.action.setBadgeText({ text: text, tabId: tabId });
+    
+    let r, g;
+    if (volume <= 100) {
+      r = 0; g = 255;
+    } else if (volume <= 600) {
+      r = Math.round(((volume - 100) / 500) * 255);
+      g = 255;
+    } else {
+      r = 255;
+      g = Math.round(255 - ((volume - 600) / 400) * 255);
+    }
+    
     browser.action.setBadgeBackgroundColor({ 
-      color: volume > 600 ? "#ff4757" : "#00cc6a", 
+      color: [r, g, 0, 255], 
       tabId: tabId 
     });
   } else {

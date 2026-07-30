@@ -140,11 +140,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     const currentVal = val !== null ? val : parseInt(volumeSlider.value, 10);
     volumeValue.textContent = currentVal + "%";
     
-    if (currentVal > 600) {
-      volumeValue.className = "glow-red";
+    let hue;
+    if (currentVal <= 100) {
+      hue = 150;
+    } else if (currentVal <= 600) {
+      hue = 150 - ((currentVal - 100) / 500) * 90;
     } else {
-      volumeValue.className = "glow-green";
+      hue = 60 - ((currentVal - 600) / 400) * 60;
     }
+    
+    const lightness = isLightMode ? 35 : 50;
+    const dynamicColor = `hsl(${hue}, 100%, ${lightness}%)`;
+    volumeValue.style.color = dynamicColor;
+    volumeValue.style.textShadow = `0 0 12px hsla(${hue}, 100%, ${lightness}%, 0.4)`;
+    volumeValue.className = "";
+    document.documentElement.style.setProperty('--dynamic-accent', dynamicColor);
+
     
     if (lastVolText) lastVolText.textContent = globalLastVolume + "%";
   }
@@ -186,12 +197,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     isLightMode = !isLightMode;
     document.body.classList.toggle("light-mode", isLightMode);
     browser.storage.local.set({ themePreference: isLightMode ? "light" : "dark" });
+    updateUIText();
   });
 
   volumeSlider.addEventListener("input", async () => {
     const currentVol = parseInt(volumeSlider.value, 10);
     masterToggle.checked = (currentVol !== 100);
     updateUIText(currentVol);
+    
+    browser.runtime.sendMessage({
+      action: "updateBadge",
+      tabId: tabId,
+      volume: currentVol,
+      enabled: masterToggle.checked
+    });
+    
     try {
       await browser.tabs.sendMessage(tabId, {
         action: "updateVolume",
@@ -224,3 +244,5 @@ document.addEventListener("DOMContentLoaded", async () => {
     syncState();
   });
 });
+
+

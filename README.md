@@ -2,6 +2,10 @@
 
 A powerful, lightweight, and strictly privacy-focused volume booster extension for **Mozilla Firefox** and **Google Chrome**. Built natively with Manifest V3 and the Web Audio API, it allows you to amplify your browser's audio up to **1000%** with smart domain-based memory and absolute zero background resource drain.
 
+> **[TIP]**
+> **Need more advanced audio controls?** Check out **[Sound Master](https://github.com/MasterAlexS/SoundMaster)**! 
+> It is an advanced extension built directly upon the highly-optimized core of **Volume Booster**, adding professional features like an Anti-Distortion Compressor, a Multi-Band Equalizer, and Audio Balance controls.
+
 ---
 
 ## ✨ Features

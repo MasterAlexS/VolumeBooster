@@ -63,3 +63,7 @@ function updateTabBadge(tabId, enabled, volume) {
     browser.action.setBadgeText({ text: "", tabId: tabId });
   }
 }
+
+browser.tabs.onRemoved.addListener((tabId) => {
+  browser.storage.local.remove("tab_$tabId");
+});

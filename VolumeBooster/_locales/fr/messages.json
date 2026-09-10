@@ -1,18 +1,56 @@
-﻿{
-  "extName": { "message": "Amplificateur de Volume" },
-  "extDesc": { "message": "Augmentez le volume de l'onglet de 600% à 1000% avec les modes Standard et Extrême. Amplification audio sécurisée avec l'API Web Audio et sauvegarde de l'état." },
-  "standardMode": { "message": "Standard" },
-  "extremeMode": { "message": "Extrême" },
-  "resetBtn": { "message": "100%" },
-  "applyLastBtn": { "message": "Appliquer le dernier" },
-  "loading": { "message": "Chargement..." },
-  "activeOn": { "message": "Actif sur : " },
-  "activeCurrent": { "message": "Actif sur : la page actuelle" },
-  "errorNoTab": { "message": "Erreur : Aucun onglet actif trouvé" },
-  "themeToggleTitle": { "message": "Basculer Mode Clair/Sombre" },
-  "boostToggleTitle": { "message": "Activer/Désactiver l'Amplification" },
-  "extremeToggleTitle": { "message": "Basculer Mode Extrême 1000%" },
-  "resetBtnTitle": { "message": "Définir à 100%" }, 
-  "langSelectTitle": { "message": "Changer de Langue" }
+{
+  "extName": {
+    "message": "Amplificateur de Volume"
+  },
+  "extDesc": {
+    "message": "Augmentez le volume de l'onglet de 600% à 1000% avec les modes Standard et Extrême. Amplification audio sécurisée avec l'API Web Audio et sauvegarde de l'état."
+  },
+  "standardMode": {
+    "message": "Standard"
+  },
+  "extremeMode": {
+    "message": "Extrême"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Appliquer le dernier"
+  },
+  "loading": {
+    "message": "Chargement..."
+  },
+  "activeOn": {
+    "message": "Actif sur : "
+  },
+  "activeCurrent": {
+    "message": "Actif sur : la page actuelle"
+  },
+  "errorNoTab": {
+    "message": "Erreur : Aucun onglet actif trouvé"
+  },
+  "themeToggleTitle": {
+    "message": "Basculer Mode Clair/Sombre"
+  },
+  "boostToggleTitle": {
+    "message": "Activer/Désactiver l'Amplification"
+  },
+  "extremeToggleTitle": {
+    "message": "Basculer Mode Extrême 1000%"
+  },
+  "resetBtnTitle": {
+    "message": "Définir à 100%"
+  },
+  "langSelectTitle": {
+    "message": "Changer de Langue"
+  },
+  "syncTabsText": {
+    "message": "Synchroniser les onglets"
+  },
+  "syncTabsTitle": {
+    "message": "Appliquer le volume actuel à tous les onglets de ce domaine"
+  },
+  "syncSuccess": {
+    "message": "✓ Synchronisé !"
+  }
 }
-

@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Intensificador de Volume" }, "extDesc": { "message": "Aumente o volume da aba de 600% a 1000%." }, "standardMode": { "message": "Padrão" }, "extremeMode": { "message": "Extremo" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Aplicar Último" }, "loading": { "message": "Carregando..." }, "activeOn": { "message": "Ativo em: " }, "activeCurrent": { "message": "Ativo em: página atual" }, "errorNoTab": { "message": "Erro: Nenhuma aba ativa" }, "themeToggleTitle": { "message": "Modo Claro/Escuro" }, "boostToggleTitle": { "message": "Amplificação ON/OFF" }, "extremeToggleTitle": { "message": "Modo Extremo 1000%" }, "resetBtnTitle": { "message": "Definir para 100%" }, 
-  "langSelectTitle": { "message": "Mudar Idioma" } }
-
+{
+  "extName": {
+    "message": "Intensificador de Volume"
+  },
+  "extDesc": {
+    "message": "Aumente o volume da aba de 600% a 1000%."
+  },
+  "standardMode": {
+    "message": "Padrão"
+  },
+  "extremeMode": {
+    "message": "Extremo"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Aplicar Último"
+  },
+  "loading": {
+    "message": "Carregando..."
+  },
+  "activeOn": {
+    "message": "Ativo em: "
+  },
+  "activeCurrent": {
+    "message": "Ativo em: página atual"
+  },
+  "errorNoTab": {
+    "message": "Erro: Nenhuma aba ativa"
+  },
+  "themeToggleTitle": {
+    "message": "Modo Claro/Escuro"
+  },
+  "boostToggleTitle": {
+    "message": "Amplificação ON/OFF"
+  },
+  "extremeToggleTitle": {
+    "message": "Modo Extremo 1000%"
+  },
+  "resetBtnTitle": {
+    "message": "Definir para 100%"
+  },
+  "langSelectTitle": {
+    "message": "Mudar Idioma"
+  },
+  "syncTabsText": {
+    "message": "Sincronizar todas as guias"
+  },
+  "syncTabsTitle": {
+    "message": "Aplicar o volume atual a todas as guias deste domínio"
+  },
+  "syncSuccess": {
+    "message": "✓ Sincronizado!"
+  }
+}

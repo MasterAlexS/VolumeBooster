@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "볼륨 부스터" }, "extDesc": { "message": "탭 볼륨을 600%에서 1000%로 높입니다." }, "standardMode": { "message": "표준" }, "extremeMode": { "message": "극한" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "마지막 적용" }, "loading": { "message": "로딩 중..." }, "activeOn": { "message": "활성화 됨: " }, "activeCurrent": { "message": "활성화 됨: 현재 페이지" }, "errorNoTab": { "message": "오류: 활성 탭을 찾을 수 없음" }, "themeToggleTitle": { "message": "라이트/다크 모드 전환" }, "boostToggleTitle": { "message": "부스트 켜기/끄기" }, "extremeToggleTitle": { "message": "1000% 극한 모드 전환" }, "resetBtnTitle": { "message": "100%로 설정" }, 
-  "langSelectTitle": { "message": "언어 변경" } }
-
+{
+  "extName": {
+    "message": "볼륨 부스터"
+  },
+  "extDesc": {
+    "message": "탭 볼륨을 600%에서 1000%로 높입니다."
+  },
+  "standardMode": {
+    "message": "표준"
+  },
+  "extremeMode": {
+    "message": "극한"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "마지막 적용"
+  },
+  "loading": {
+    "message": "로딩 중..."
+  },
+  "activeOn": {
+    "message": "활성화 됨: "
+  },
+  "activeCurrent": {
+    "message": "활성화 됨: 현재 페이지"
+  },
+  "errorNoTab": {
+    "message": "오류: 활성 탭을 찾을 수 없음"
+  },
+  "themeToggleTitle": {
+    "message": "라이트/다크 모드 전환"
+  },
+  "boostToggleTitle": {
+    "message": "부스트 켜기/끄기"
+  },
+  "extremeToggleTitle": {
+    "message": "1000% 극한 모드 전환"
+  },
+  "resetBtnTitle": {
+    "message": "100%로 설정"
+  },
+  "langSelectTitle": {
+    "message": "언어 변경"
+  },
+  "syncTabsText": {
+    "message": "모든 탭 동기화"
+  },
+  "syncTabsTitle": {
+    "message": "이 도메인의 모든 탭에 현재 볼륨 적용"
+  },
+  "syncSuccess": {
+    "message": "✓ 동기화됨!"
+  }
+}

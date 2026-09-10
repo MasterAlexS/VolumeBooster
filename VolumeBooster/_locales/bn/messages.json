@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "ভলিউম বুস্টার" }, "extDesc": { "message": "ভলিউম বাড়ান।" }, "standardMode": { "message": "স্ট্যান্ডার্ড" }, "extremeMode": { "message": "চরম" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "শেষ প্রয়োগ করুন" }, "loading": { "message": "লোড হচ্ছে..." }, "activeOn": { "message": "সক্রিয়: " }, "activeCurrent": { "message": "সক্রিয়: বর্তমান পৃষ্ঠা" }, "errorNoTab": { "message": "ত্রুটি: কোন সক্রিয় ট্যাব নেই" }, "themeToggleTitle": { "message": "ডার্ক/লাইট মোড" }, "boostToggleTitle": { "message": "বুস্ট চালু/বন্ধ" }, "extremeToggleTitle": { "message": "চরম মোড" }, "resetBtnTitle": { "message": "100% সেট করুন" }, 
-  "langSelectTitle": { "message": "ভাষা পরিবর্তন করুন" } }
-
+{
+  "extName": {
+    "message": "ভলিউম বুস্টার"
+  },
+  "extDesc": {
+    "message": "ভলিউম বাড়ান।"
+  },
+  "standardMode": {
+    "message": "স্ট্যান্ডার্ড"
+  },
+  "extremeMode": {
+    "message": "চরম"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "শেষ প্রয়োগ করুন"
+  },
+  "loading": {
+    "message": "লোড হচ্ছে..."
+  },
+  "activeOn": {
+    "message": "সক্রিয়: "
+  },
+  "activeCurrent": {
+    "message": "সক্রিয়: বর্তমান পৃষ্ঠা"
+  },
+  "errorNoTab": {
+    "message": "ত্রুটি: কোন সক্রিয় ট্যাব নেই"
+  },
+  "themeToggleTitle": {
+    "message": "ডার্ক/লাইট মোড"
+  },
+  "boostToggleTitle": {
+    "message": "বুস্ট চালু/বন্ধ"
+  },
+  "extremeToggleTitle": {
+    "message": "চরম মোড"
+  },
+  "resetBtnTitle": {
+    "message": "100% সেট করুন"
+  },
+  "langSelectTitle": {
+    "message": "ভাষা পরিবর্তন করুন"
+  },
+  "syncTabsText": {
+    "message": "সব ট্যাব সিঙ্ক করুন"
+  },
+  "syncTabsTitle": {
+    "message": "এই ডোমেনে সমস্ত ট্যাবে বর্তমান ভলিউম প্রয়োগ করুন"
+  },
+  "syncSuccess": {
+    "message": "✓ সিঙ্ক হয়েছে!"
+  }
+}

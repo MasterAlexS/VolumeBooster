@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Усилвател на звука" }, "extDesc": { "message": "Увеличете силата на звука." }, "standardMode": { "message": "Стандарт" }, "extremeMode": { "message": "Екстремно" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Приложи последно" }, "loading": { "message": "Зареждане..." }, "activeOn": { "message": "Активно на: " }, "activeCurrent": { "message": "Активно на: текущата страница" }, "errorNoTab": { "message": "Грешка: Няма активен раздел" }, "themeToggleTitle": { "message": "Светъл/Тъмен режим" }, "boostToggleTitle": { "message": "Вкл/Изкл" }, "extremeToggleTitle": { "message": "Екстремен режим" }, "resetBtnTitle": { "message": "100%" }, 
-  "langSelectTitle": { "message": "Промяна на езика" } }
-
+{
+  "extName": {
+    "message": "Усилвател на звука"
+  },
+  "extDesc": {
+    "message": "Увеличете силата на звука."
+  },
+  "standardMode": {
+    "message": "Стандарт"
+  },
+  "extremeMode": {
+    "message": "Екстремно"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Приложи последно"
+  },
+  "loading": {
+    "message": "Зареждане..."
+  },
+  "activeOn": {
+    "message": "Активно на: "
+  },
+  "activeCurrent": {
+    "message": "Активно на: текущата страница"
+  },
+  "errorNoTab": {
+    "message": "Грешка: Няма активен раздел"
+  },
+  "themeToggleTitle": {
+    "message": "Светъл/Тъмен режим"
+  },
+  "boostToggleTitle": {
+    "message": "Вкл/Изкл"
+  },
+  "extremeToggleTitle": {
+    "message": "Екстремен режим"
+  },
+  "resetBtnTitle": {
+    "message": "100%"
+  },
+  "langSelectTitle": {
+    "message": "Промяна на езика"
+  },
+  "syncTabsText": {
+    "message": "Синхронизиране на всички раздели"
+  },
+  "syncTabsTitle": {
+    "message": "Прилагане на текущата сила на звука към всички раздели в този домейн"
+  },
+  "syncSuccess": {
+    "message": "✓ Синхронизирано!"
+  }
+}

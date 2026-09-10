@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Volymförstärkare" }, "extDesc": { "message": "Öka flikvolymen från 600% till 1000%." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Extrem" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Använd Senaste" }, "loading": { "message": "Laddar..." }, "activeOn": { "message": "Aktiv på: " }, "activeCurrent": { "message": "Aktiv på: nuvarande sida" }, "errorNoTab": { "message": "Fel: Ingen aktiv flik hittades" }, "themeToggleTitle": { "message": "Växla Ljust/Mörkt Läge" }, "boostToggleTitle": { "message": "Växla Förstärkning PÅ/AV" }, "extremeToggleTitle": { "message": "Växla 1000% Extremt Läge" }, "resetBtnTitle": { "message": "Ställ in på 100%" }, 
-  "langSelectTitle": { "message": "Ändra språk" } }
-
+{
+  "extName": {
+    "message": "Volymförstärkare"
+  },
+  "extDesc": {
+    "message": "Öka flikvolymen från 600% till 1000%."
+  },
+  "standardMode": {
+    "message": "Standard"
+  },
+  "extremeMode": {
+    "message": "Extrem"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Använd Senaste"
+  },
+  "loading": {
+    "message": "Laddar..."
+  },
+  "activeOn": {
+    "message": "Aktiv på: "
+  },
+  "activeCurrent": {
+    "message": "Aktiv på: nuvarande sida"
+  },
+  "errorNoTab": {
+    "message": "Fel: Ingen aktiv flik hittades"
+  },
+  "themeToggleTitle": {
+    "message": "Växla Ljust/Mörkt Läge"
+  },
+  "boostToggleTitle": {
+    "message": "Växla Förstärkning PÅ/AV"
+  },
+  "extremeToggleTitle": {
+    "message": "Växla 1000% Extremt Läge"
+  },
+  "resetBtnTitle": {
+    "message": "Ställ in på 100%"
+  },
+  "langSelectTitle": {
+    "message": "Ändra språk"
+  },
+  "syncTabsText": {
+    "message": "Synkronisera alla flikar"
+  },
+  "syncTabsTitle": {
+    "message": "Tillämpa aktuell volym på alla flikar på denna domän"
+  },
+  "syncSuccess": {
+    "message": "✓ Synkroniserad!"
+  }
+}

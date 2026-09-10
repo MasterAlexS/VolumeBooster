@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Amplificador de Volum" }, "extDesc": { "message": "Augmenteu el volum." }, "standardMode": { "message": "Estàndard" }, "extremeMode": { "message": "Extrem" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Aplica últim" }, "loading": { "message": "Carregant..." }, "activeOn": { "message": "Actiu a: " }, "activeCurrent": { "message": "Actiu a: pàgina actual" }, "errorNoTab": { "message": "Error: Cap pestanya" }, "themeToggleTitle": { "message": "Mode Clar/Fosc" }, "boostToggleTitle": { "message": "Activar/Desactivar" }, "extremeToggleTitle": { "message": "Mode Extrem" }, "resetBtnTitle": { "message": "100%" }, 
-  "langSelectTitle": { "message": "Canviar d'idioma" } }
-
+{
+  "extName": {
+    "message": "Amplificador de Volum"
+  },
+  "extDesc": {
+    "message": "Augmenteu el volum."
+  },
+  "standardMode": {
+    "message": "Estàndard"
+  },
+  "extremeMode": {
+    "message": "Extrem"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Aplica últim"
+  },
+  "loading": {
+    "message": "Carregant..."
+  },
+  "activeOn": {
+    "message": "Actiu a: "
+  },
+  "activeCurrent": {
+    "message": "Actiu a: pàgina actual"
+  },
+  "errorNoTab": {
+    "message": "Error: Cap pestanya"
+  },
+  "themeToggleTitle": {
+    "message": "Mode Clar/Fosc"
+  },
+  "boostToggleTitle": {
+    "message": "Activar/Desactivar"
+  },
+  "extremeToggleTitle": {
+    "message": "Mode Extrem"
+  },
+  "resetBtnTitle": {
+    "message": "100%"
+  },
+  "langSelectTitle": {
+    "message": "Canviar d'idioma"
+  },
+  "syncTabsText": {
+    "message": "Sincronitza totes les pestanyes"
+  },
+  "syncTabsTitle": {
+    "message": "Aplica el volum actual a totes les pestanyes d'aquest domini"
+  },
+  "syncSuccess": {
+    "message": "✓ Sincronitzat!"
+  }
+}

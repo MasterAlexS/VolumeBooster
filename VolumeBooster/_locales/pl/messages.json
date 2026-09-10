@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Wzmacniacz Głośności" }, "extDesc": { "message": "Zwiększ głośność z 600% do 1000%." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Ekstremalny" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Zastosuj Ostatni" }, "loading": { "message": "Ładowanie..." }, "activeOn": { "message": "Aktywny na: " }, "activeCurrent": { "message": "Aktywny na: bieżącej stronie" }, "errorNoTab": { "message": "Błąd: Nie znaleziono aktywnej karty" }, "themeToggleTitle": { "message": "Przełącz Jasny/Ciemny Motyw" }, "boostToggleTitle": { "message": "Włącz/Wyłącz Wzmocnienie" }, "extremeToggleTitle": { "message": "Przełącz Tryb Ekstremalny 1000%" }, "resetBtnTitle": { "message": "Ustaw na 100%" }, 
-  "langSelectTitle": { "message": "Zmień język" } }
-
+{
+  "extName": {
+    "message": "Wzmacniacz Głośności"
+  },
+  "extDesc": {
+    "message": "Zwiększ głośność z 600% do 1000%."
+  },
+  "standardMode": {
+    "message": "Standard"
+  },
+  "extremeMode": {
+    "message": "Ekstremalny"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Zastosuj Ostatni"
+  },
+  "loading": {
+    "message": "Ładowanie..."
+  },
+  "activeOn": {
+    "message": "Aktywny na: "
+  },
+  "activeCurrent": {
+    "message": "Aktywny na: bieżącej stronie"
+  },
+  "errorNoTab": {
+    "message": "Błąd: Nie znaleziono aktywnej karty"
+  },
+  "themeToggleTitle": {
+    "message": "Przełącz Jasny/Ciemny Motyw"
+  },
+  "boostToggleTitle": {
+    "message": "Włącz/Wyłącz Wzmocnienie"
+  },
+  "extremeToggleTitle": {
+    "message": "Przełącz Tryb Ekstremalny 1000%"
+  },
+  "resetBtnTitle": {
+    "message": "Ustaw na 100%"
+  },
+  "langSelectTitle": {
+    "message": "Zmień język"
+  },
+  "syncTabsText": {
+    "message": "Synchronizuj wszystkie karty"
+  },
+  "syncTabsTitle": {
+    "message": "Zastosuj bieżącą głośność do wszystkich kart w tej domenie"
+  },
+  "syncSuccess": {
+    "message": "✓ Zsynchronizowano!"
+  }
+}

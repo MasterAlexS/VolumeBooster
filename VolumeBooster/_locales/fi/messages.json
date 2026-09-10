@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Äänenvoimakkuuden Vahvistin" }, "extDesc": { "message": "Nosta äänenvoimakkuutta 600%:sta 1000%:iin." }, "standardMode": { "message": "Standardi" }, "extremeMode": { "message": "Äärimmäinen" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Käytä Viimeisintä" }, "loading": { "message": "Ladataan..." }, "activeOn": { "message": "Aktiivinen: " }, "activeCurrent": { "message": "Aktiivinen: nykyinen sivu" }, "errorNoTab": { "message": "Virhe: Aktiivista välilehteä ei löytynyt" }, "themeToggleTitle": { "message": "Vaihda Vaalea/Tumma Tila" }, "boostToggleTitle": { "message": "Vaihda Vahvistus PÄÄLLE/POIS" }, "extremeToggleTitle": { "message": "Vaihda 1000% Äärimmäinen Tila" }, "resetBtnTitle": { "message": "Aseta 100%" }, 
-  "langSelectTitle": { "message": "Vaihda kieli" } }
-
+{
+  "extName": {
+    "message": "Äänenvoimakkuuden Vahvistin"
+  },
+  "extDesc": {
+    "message": "Nosta äänenvoimakkuutta 600%:sta 1000%:iin."
+  },
+  "standardMode": {
+    "message": "Standardi"
+  },
+  "extremeMode": {
+    "message": "Äärimmäinen"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Käytä Viimeisintä"
+  },
+  "loading": {
+    "message": "Ladataan..."
+  },
+  "activeOn": {
+    "message": "Aktiivinen: "
+  },
+  "activeCurrent": {
+    "message": "Aktiivinen: nykyinen sivu"
+  },
+  "errorNoTab": {
+    "message": "Virhe: Aktiivista välilehteä ei löytynyt"
+  },
+  "themeToggleTitle": {
+    "message": "Vaihda Vaalea/Tumma Tila"
+  },
+  "boostToggleTitle": {
+    "message": "Vaihda Vahvistus PÄÄLLE/POIS"
+  },
+  "extremeToggleTitle": {
+    "message": "Vaihda 1000% Äärimmäinen Tila"
+  },
+  "resetBtnTitle": {
+    "message": "Aseta 100%"
+  },
+  "langSelectTitle": {
+    "message": "Vaihda kieli"
+  },
+  "syncTabsText": {
+    "message": "Synkronoi kaikki välilehdet"
+  },
+  "syncTabsTitle": {
+    "message": "Käytä nykyistä äänenvoimakkuutta kaikkiin tämän verkkotunnuksen välilehtiin"
+  },
+  "syncSuccess": {
+    "message": "✓ Synkronoitu!"
+  }
+}

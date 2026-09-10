@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "ವಾಲ್ಯೂಮ್ ಬೂಸ್ಟರ್" }, "extDesc": { "message": "ವಾಲ್ಯೂಮ್ ಹೆಚ್ಚಿಸಿ." }, "standardMode": { "message": "ಸ್ಟ್ಯಾಂಡರ್ಡ್" }, "extremeMode": { "message": "ಎಕ್ಸ್ಟ್ರೀಮ್" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "ಕೊನೆಯದನ್ನು ಅನ್ವಯಿಸಿ" }, "loading": { "message": "ಲೋಡ್ ಆಗುತ್ತಿದೆ..." }, "activeOn": { "message": "ಸಕ್ರಿಯ: " }, "activeCurrent": { "message": "ಸಕ್ರಿಯ: ಪ್ರಸ್ತುತ ಪುಟ" }, "errorNoTab": { "message": "ದೋಷ: ಸಕ್ರಿಯ ಟ್ಯಾಬ್ ಇಲ್ಲ" }, "themeToggleTitle": { "message": "ಲೈಟ್/ಡಾರ್ಕ್ ಮೋಡ್" }, "boostToggleTitle": { "message": "ಬೂಸ್ಟ್ ಆನ್/ಆಫ್" }, "extremeToggleTitle": { "message": "ಎಕ್ಸ್ಟ್ರೀಮ್ ಮೋಡ್" }, "resetBtnTitle": { "message": "100% ಗೆ ಹೊಂದಿಸಿ" }, 
-  "langSelectTitle": { "message": "ಭಾಷೆ ಬದಲಾಯಿಸಿ" } }
-
+{
+  "extName": {
+    "message": "ವಾಲ್ಯೂಮ್ ಬೂಸ್ಟರ್"
+  },
+  "extDesc": {
+    "message": "ವಾಲ್ಯೂಮ್ ಹೆಚ್ಚಿಸಿ."
+  },
+  "standardMode": {
+    "message": "ಸ್ಟ್ಯಾಂಡರ್ಡ್"
+  },
+  "extremeMode": {
+    "message": "ಎಕ್ಸ್ಟ್ರೀಮ್"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "ಕೊನೆಯದನ್ನು ಅನ್ವಯಿಸಿ"
+  },
+  "loading": {
+    "message": "ಲೋಡ್ ಆಗುತ್ತಿದೆ..."
+  },
+  "activeOn": {
+    "message": "ಸಕ್ರಿಯ: "
+  },
+  "activeCurrent": {
+    "message": "ಸಕ್ರಿಯ: ಪ್ರಸ್ತುತ ಪುಟ"
+  },
+  "errorNoTab": {
+    "message": "ದೋಷ: ಸಕ್ರಿಯ ಟ್ಯಾಬ್ ಇಲ್ಲ"
+  },
+  "themeToggleTitle": {
+    "message": "ಲೈಟ್/ಡಾರ್ಕ್ ಮೋಡ್"
+  },
+  "boostToggleTitle": {
+    "message": "ಬೂಸ್ಟ್ ಆನ್/ಆಫ್"
+  },
+  "extremeToggleTitle": {
+    "message": "ಎಕ್ಸ್ಟ್ರೀಮ್ ಮೋಡ್"
+  },
+  "resetBtnTitle": {
+    "message": "100% ಗೆ ಹೊಂದಿಸಿ"
+  },
+  "langSelectTitle": {
+    "message": "ಭಾಷೆ ಬದಲಾಯಿಸಿ"
+  },
+  "syncTabsText": {
+    "message": "ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳನ್ನು ಸಿಂಕ್ ಮಾಡಿ"
+  },
+  "syncTabsTitle": {
+    "message": "ಈ ಡೊಮೇನ್‌ನಲ್ಲಿರುವ ಎಲ್ಲಾ ಟ್ಯಾಬ್‌ಗಳಿಗೆ ಪ್ರಸ್ತುತ ವಾಲ್ಯೂಮ್ ಅನ್ನು ಅನ್ವಯಿಸಿ"
+  },
+  "syncSuccess": {
+    "message": "✓ ಸಿಂಕ್ ಆಗಿದೆ!"
+  }
+}

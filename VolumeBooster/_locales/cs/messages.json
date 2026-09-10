@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Zesilovač Zvuku" }, "extDesc": { "message": "Zvyšte hlasitost z 600 % na 1000 %." }, "standardMode": { "message": "Standardní" }, "extremeMode": { "message": "Extrémní" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Použít Poslední" }, "loading": { "message": "Načítání..." }, "activeOn": { "message": "Aktivní na: " }, "activeCurrent": { "message": "Aktivní na: aktuální stránce" }, "errorNoTab": { "message": "Chyba: Nebyla nalezena aktivní karta" }, "themeToggleTitle": { "message": "Přepnout Světlý/Tmavý Režim" }, "boostToggleTitle": { "message": "Přepnout Zesílení ZAP/VYP" }, "extremeToggleTitle": { "message": "Přepnout 1000% Extrémní Režim" }, "resetBtnTitle": { "message": "Nastavit na 100%" }, 
-  "langSelectTitle": { "message": "Změnit jazyk" } }
-
+{
+  "extName": {
+    "message": "Zesilovač Zvuku"
+  },
+  "extDesc": {
+    "message": "Zvyšte hlasitost z 600 % na 1000 %."
+  },
+  "standardMode": {
+    "message": "Standardní"
+  },
+  "extremeMode": {
+    "message": "Extrémní"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Použít Poslední"
+  },
+  "loading": {
+    "message": "Načítání..."
+  },
+  "activeOn": {
+    "message": "Aktivní na: "
+  },
+  "activeCurrent": {
+    "message": "Aktivní na: aktuální stránce"
+  },
+  "errorNoTab": {
+    "message": "Chyba: Nebyla nalezena aktivní karta"
+  },
+  "themeToggleTitle": {
+    "message": "Přepnout Světlý/Tmavý Režim"
+  },
+  "boostToggleTitle": {
+    "message": "Přepnout Zesílení ZAP/VYP"
+  },
+  "extremeToggleTitle": {
+    "message": "Přepnout 1000% Extrémní Režim"
+  },
+  "resetBtnTitle": {
+    "message": "Nastavit na 100%"
+  },
+  "langSelectTitle": {
+    "message": "Změnit jazyk"
+  },
+  "syncTabsText": {
+    "message": "Synchronizovat všechny panely"
+  },
+  "syncTabsTitle": {
+    "message": "Použít aktuální hlasitost na všechny panely v této doméně"
+  },
+  "syncSuccess": {
+    "message": "✓ Synchronizováno!"
+  }
+}

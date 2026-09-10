@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "वॉल्यूम बूस्टर" }, "extDesc": { "message": "वॉल्यूम को 600% से 1000% तक बढ़ाएं।" }, "standardMode": { "message": "मानक" }, "extremeMode": { "message": "चरम" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "अंतिम लागू करें" }, "loading": { "message": "लोड हो रहा है..." }, "activeOn": { "message": "पर सक्रिय: " }, "activeCurrent": { "message": "पर सक्रिय: वर्तमान पृष्ठ" }, "errorNoTab": { "message": "त्रुटि: कोई सक्रिय टैब नहीं मिला" }, "themeToggleTitle": { "message": "लाइट/डार्क मोड टॉगल करें" }, "boostToggleTitle": { "message": "बूस्ट चालू/बंद करें" }, "extremeToggleTitle": { "message": "1000% चरम मोड टॉगल करें" }, "resetBtnTitle": { "message": "100% पर सेट करें" }, 
-  "langSelectTitle": { "message": "भाषा बदलें" } }
-
+{
+  "extName": {
+    "message": "वॉल्यूम बूस्टर"
+  },
+  "extDesc": {
+    "message": "वॉल्यूम को 600% से 1000% तक बढ़ाएं।"
+  },
+  "standardMode": {
+    "message": "मानक"
+  },
+  "extremeMode": {
+    "message": "चरम"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "अंतिम लागू करें"
+  },
+  "loading": {
+    "message": "लोड हो रहा है..."
+  },
+  "activeOn": {
+    "message": "पर सक्रिय: "
+  },
+  "activeCurrent": {
+    "message": "पर सक्रिय: वर्तमान पृष्ठ"
+  },
+  "errorNoTab": {
+    "message": "त्रुटि: कोई सक्रिय टैब नहीं मिला"
+  },
+  "themeToggleTitle": {
+    "message": "लाइट/डार्क मोड टॉगल करें"
+  },
+  "boostToggleTitle": {
+    "message": "बूस्ट चालू/बंद करें"
+  },
+  "extremeToggleTitle": {
+    "message": "1000% चरम मोड टॉगल करें"
+  },
+  "resetBtnTitle": {
+    "message": "100% पर सेट करें"
+  },
+  "langSelectTitle": {
+    "message": "भाषा बदलें"
+  },
+  "syncTabsText": {
+    "message": "सभी टैब सिंक करें"
+  },
+  "syncTabsTitle": {
+    "message": "इस डोमेन के सभी टैब पर वर्तमान वॉल्यूम लागू करें"
+  },
+  "syncSuccess": {
+    "message": "✓ सिंक हो गया!"
+  }
+}

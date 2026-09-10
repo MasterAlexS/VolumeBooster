@@ -1,18 +1,56 @@
-﻿{
-  "extName": { "message": "Lautstärke Booster" },
-  "extDesc": { "message": "Erhöhen Sie die Lautstärke von Tabs auf 600% bis 1000% mit den Standard- und Extrem-Modi. Sichere Audioverstärkung mit Web Audio API." },
-  "standardMode": { "message": "Standard" },
-  "extremeMode": { "message": "Extrem" },
-  "resetBtn": { "message": "100%" },
-  "applyLastBtn": { "message": "Zuletzt anwenden" },
-  "loading": { "message": "Laden..." },
-  "activeOn": { "message": "Aktiv auf: " },
-  "activeCurrent": { "message": "Aktiv auf: aktuelle Seite" },
-  "errorNoTab": { "message": "Fehler: Kein aktiver Tab gefunden" },
-  "themeToggleTitle": { "message": "Hell-/Dunkelmodus umschalten" },
-  "boostToggleTitle": { "message": "Verstärkung EIN/AUS schalten" },
-  "extremeToggleTitle": { "message": "1000% Extrem-Modus umschalten" },
-  "resetBtnTitle": { "message": "Auf 100% setzen" }, 
-  "langSelectTitle": { "message": "Sprache ändern" }
+{
+  "extName": {
+    "message": "Lautstärke Booster"
+  },
+  "extDesc": {
+    "message": "Erhöhen Sie die Lautstärke von Tabs auf 600% bis 1000% mit den Standard- und Extrem-Modi. Sichere Audioverstärkung mit Web Audio API."
+  },
+  "standardMode": {
+    "message": "Standard"
+  },
+  "extremeMode": {
+    "message": "Extrem"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Zuletzt anwenden"
+  },
+  "loading": {
+    "message": "Laden..."
+  },
+  "activeOn": {
+    "message": "Aktiv auf: "
+  },
+  "activeCurrent": {
+    "message": "Aktiv auf: aktuelle Seite"
+  },
+  "errorNoTab": {
+    "message": "Fehler: Kein aktiver Tab gefunden"
+  },
+  "themeToggleTitle": {
+    "message": "Hell-/Dunkelmodus umschalten"
+  },
+  "boostToggleTitle": {
+    "message": "Verstärkung EIN/AUS schalten"
+  },
+  "extremeToggleTitle": {
+    "message": "1000% Extrem-Modus umschalten"
+  },
+  "resetBtnTitle": {
+    "message": "Auf 100% setzen"
+  },
+  "langSelectTitle": {
+    "message": "Sprache ändern"
+  },
+  "syncTabsText": {
+    "message": "Alle Tabs synchronisieren"
+  },
+  "syncTabsTitle": {
+    "message": "Aktuelle Lautstärke auf alle Tabs dieser Domain anwenden"
+  },
+  "syncSuccess": {
+    "message": "✓ Synchronisiert!"
+  }
 }
-

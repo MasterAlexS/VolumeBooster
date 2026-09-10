@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   let langPref = storageData.languagePreference || "auto";
 
   langSelect.value = langPref;
-  
+
   if (isLightMode) document.body.classList.add("light-mode");
 
   let customMessages = null;
@@ -89,10 +89,12 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const tabs = await browser.tabs.query({ active: true, currentWindow: true });
   const currentTab = tabs[0];
-  
+
   let tabId = null;
-  let storageKey = null;
+  let tabKey = null;
+  let domainKey = null;
   let urlObj = null;
+  let domainVolume = 100;
 
   function updateTabInfoDisplay() {
     if (!currentTab) {
@@ -110,22 +112,29 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (currentTab) {
     tabId = currentTab.id;
-    storageKey = "tab_" + tabId;
+    tabKey = "tab_" + tabId;
     try {
       urlObj = new URL(currentTab.url);
       if (urlObj.hostname) {
-        storageKey = "domain_" + urlObj.hostname;
+        domainKey = "domain_" + urlObj.hostname;
       }
-    } catch (e) {}
+    } catch (e) { }
   }
-  
+
   updateTabInfoDisplay();
 
   let tabState = { enabled: false, volume: 100, extremeMode: false };
-  if (storageKey) {
-    const tabData = await browser.storage.local.get([storageKey]);
-    if (tabData[storageKey]) {
-      tabState = tabData[storageKey];
+
+  if (tabKey) {
+    let keysToGet = [tabKey];
+    if (domainKey) keysToGet.push(domainKey);
+
+    const tabAndDomainData = await browser.storage.local.get(keysToGet);
+    if (tabAndDomainData[tabKey]) {
+      tabState = tabAndDomainData[tabKey];
+    }
+    if (domainKey && tabAndDomainData[domainKey]) {
+      domainVolume = tabAndDomainData[domainKey].volume;
     }
   }
 
@@ -133,13 +142,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   limitToggle.checked = tabState.extremeMode;
   volumeSlider.max = tabState.extremeMode ? "1000" : "600";
   volumeSlider.value = tabState.volume;
-  
+
   updateUIText();
 
   function updateUIText(val = null) {
     const currentVal = val !== null ? val : parseInt(volumeSlider.value, 10);
     volumeValue.textContent = currentVal + "%";
-    
+
     let hue;
     if (currentVal <= 100) {
       hue = 150;
@@ -148,7 +157,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     } else {
       hue = 60 - ((currentVal - 600) / 400) * 60;
     }
-    
+
     const lightness = isLightMode ? 35 : 50;
     const dynamicColor = `hsl(${hue}, 100%, ${lightness}%)`;
     volumeValue.style.color = dynamicColor;
@@ -156,25 +165,31 @@ document.addEventListener("DOMContentLoaded", async () => {
     volumeValue.className = "";
     document.documentElement.style.setProperty('--dynamic-accent', dynamicColor);
 
-    
-    if (lastVolText) lastVolText.textContent = globalLastVolume + "%";
+    if (lastVolText) lastVolText.textContent = domainVolume + "%";
   }
 
   async function syncState() {
-    if (!storageKey) return;
+    if (!tabKey) return;
     const currentVol = parseInt(volumeSlider.value);
     const isEnabled = masterToggle.checked;
     const isExtreme = limitToggle.checked;
 
     tabState = { enabled: isEnabled, volume: currentVol, extremeMode: isExtreme };
-    
-    const dataToSave = { [storageKey]: tabState };
+
+    const dataToSave = { [tabKey]: tabState };
+
+    if (domainKey && currentVol !== 100) {
+      dataToSave[domainKey] = { volume: currentVol, extremeMode: isExtreme };
+      domainVolume = currentVol;
+    }
+
     if (isEnabled && currentVol !== 100) {
       globalLastVolume = currentVol;
       dataToSave.globalLastVolume = globalLastVolume;
     }
+
     await browser.storage.local.set(dataToSave);
-    
+
     updateUIText();
 
     try {
@@ -183,7 +198,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         volume: currentVol,
         enabled: isEnabled
       });
-    } catch (err) {}
+    } catch (err) { }
 
     browser.runtime.sendMessage({
       action: "updateBadge",
@@ -191,6 +206,28 @@ document.addEventListener("DOMContentLoaded", async () => {
       volume: currentVol,
       enabled: isEnabled
     });
+  }
+
+  const syncDomainBtn = document.getElementById("syncDomainBtn");
+  if (syncDomainBtn) {
+    if (!domainKey) {
+      syncDomainBtn.parentElement.style.display = "none";
+    } else {
+      syncDomainBtn.addEventListener("click", () => {
+        const currentVol = parseInt(volumeSlider.value);
+        const isEnabled = masterToggle.checked;
+        browser.runtime.sendMessage({
+          action: "syncDomainTabs",
+          domain: urlObj.hostname,
+          state: { enabled: isEnabled, volume: currentVol, extremeMode: limitToggle.checked }
+        });
+        const originalText = syncDomainBtn.textContent;
+        syncDomainBtn.textContent = getMessage("syncSuccess") || "\u2713 Synced!";
+        setTimeout(() => {
+          syncDomainBtn.textContent = originalText;
+        }, 1500);
+      });
+    }
   }
 
   themeToggle.addEventListener("click", () => {
@@ -204,21 +241,21 @@ document.addEventListener("DOMContentLoaded", async () => {
     const currentVol = parseInt(volumeSlider.value, 10);
     masterToggle.checked = (currentVol !== 100);
     updateUIText(currentVol);
-    
+
     browser.runtime.sendMessage({
       action: "updateBadge",
       tabId: tabId,
       volume: currentVol,
       enabled: masterToggle.checked
     });
-    
+
     try {
       await browser.tabs.sendMessage(tabId, {
         action: "updateVolume",
         volume: currentVol,
         enabled: masterToggle.checked
       });
-    } catch (err) {}
+    } catch (err) { }
   });
 
   volumeSlider.addEventListener("change", () => syncState());
@@ -233,9 +270,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     syncState();
   });
   applyLastBtn.addEventListener("click", () => {
-    if (globalLastVolume > 600) { limitToggle.checked = true; volumeSlider.max = "1000"; }
-    volumeSlider.value = globalLastVolume;
-    masterToggle.checked = (globalLastVolume !== 100);
+    let volToApply = domainVolume;
+    if (volToApply > 600) { limitToggle.checked = true; volumeSlider.max = "1000"; }
+    volumeSlider.value = volToApply;
+    masterToggle.checked = (volToApply !== 100);
     syncState();
   });
   resetBtn.addEventListener("click", () => {
@@ -244,5 +282,3 @@ document.addEventListener("DOMContentLoaded", async () => {
     syncState();
   });
 });
-
-

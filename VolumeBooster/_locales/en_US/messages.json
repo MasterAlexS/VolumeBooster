@@ -1,18 +1,56 @@
-﻿{
-  "extName": { "message": "Volume Booster" },
-  "extDesc": { "message": "Boost tab volume from 600% to 1000% using Standard and Extreme modes. Safe audio amplification with Web Audio API and state saving." },
-  "standardMode": { "message": "Standard" },
-  "extremeMode": { "message": "Extreme" },
-  "resetBtn": { "message": "100%" },
-  "applyLastBtn": { "message": "Apply Last" },
-  "loading": { "message": "Loading..." },
-  "activeOn": { "message": "Active on: " },
-  "activeCurrent": { "message": "Active on: current page" },
-  "errorNoTab": { "message": "Error: No active tab found" },
-  "themeToggleTitle": { "message": "Toggle Light/Dark Mode" },
-  "boostToggleTitle": { "message": "Toggle Boost ON/OFF" },
-  "extremeToggleTitle": { "message": "Toggle 1000% Extreme Mode" },
-  "resetBtnTitle": { "message": "Set to 100%" }, 
-  "langSelectTitle": { "message": "Change Language" }
+{
+  "extName": {
+    "message": "Volume Booster"
+  },
+  "extDesc": {
+    "message": "Boost tab volume from 600% to 1000% using Standard and Extreme modes. Safe audio amplification with Web Audio API and state saving."
+  },
+  "standardMode": {
+    "message": "Standard"
+  },
+  "extremeMode": {
+    "message": "Extreme"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Apply Last"
+  },
+  "loading": {
+    "message": "Loading..."
+  },
+  "activeOn": {
+    "message": "Active on: "
+  },
+  "activeCurrent": {
+    "message": "Active on: current page"
+  },
+  "errorNoTab": {
+    "message": "Error: No active tab found"
+  },
+  "themeToggleTitle": {
+    "message": "Toggle Light/Dark Mode"
+  },
+  "boostToggleTitle": {
+    "message": "Toggle Boost ON/OFF"
+  },
+  "extremeToggleTitle": {
+    "message": "Toggle 1000% Extreme Mode"
+  },
+  "resetBtnTitle": {
+    "message": "Set to 100%"
+  },
+  "langSelectTitle": {
+    "message": "Change Language"
+  },
+  "syncTabsText": {
+    "message": "Sync All Tabs"
+  },
+  "syncTabsTitle": {
+    "message": "Apply current volume to all tabs on this domain"
+  },
+  "syncSuccess": {
+    "message": "✓ Synced!"
+  }
 }
-

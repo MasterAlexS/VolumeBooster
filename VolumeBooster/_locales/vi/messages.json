@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Tăng Âm Lượng" }, "extDesc": { "message": "Tăng âm lượng." }, "standardMode": { "message": "Tiêu chuẩn" }, "extremeMode": { "message": "Cực đại" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Áp dụng gần nhất" }, "loading": { "message": "Đang tải..." }, "activeOn": { "message": "Hoạt động trên: " }, "activeCurrent": { "message": "Hoạt động trên: trang hiện tại" }, "errorNoTab": { "message": "Lỗi: Không tìm thấy tab" }, "themeToggleTitle": { "message": "Chế độ Sáng/Tối" }, "boostToggleTitle": { "message": "BẬT/TẮT" }, "extremeToggleTitle": { "message": "Chế độ Cực đại" }, "resetBtnTitle": { "message": "100%" }, 
-  "langSelectTitle": { "message": "Đổi ngôn ngữ" } }
-
+{
+  "extName": {
+    "message": "Tăng Âm Lượng"
+  },
+  "extDesc": {
+    "message": "Tăng âm lượng."
+  },
+  "standardMode": {
+    "message": "Tiêu chuẩn"
+  },
+  "extremeMode": {
+    "message": "Cực đại"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Áp dụng gần nhất"
+  },
+  "loading": {
+    "message": "Đang tải..."
+  },
+  "activeOn": {
+    "message": "Hoạt động trên: "
+  },
+  "activeCurrent": {
+    "message": "Hoạt động trên: trang hiện tại"
+  },
+  "errorNoTab": {
+    "message": "Lỗi: Không tìm thấy tab"
+  },
+  "themeToggleTitle": {
+    "message": "Chế độ Sáng/Tối"
+  },
+  "boostToggleTitle": {
+    "message": "BẬT/TẮT"
+  },
+  "extremeToggleTitle": {
+    "message": "Chế độ Cực đại"
+  },
+  "resetBtnTitle": {
+    "message": "100%"
+  },
+  "langSelectTitle": {
+    "message": "Đổi ngôn ngữ"
+  },
+  "syncTabsText": {
+    "message": "Đồng bộ hóa tất cả các thẻ"
+  },
+  "syncTabsTitle": {
+    "message": "Áp dụng âm lượng hiện tại cho tất cả các thẻ trên miền này"
+  },
+  "syncSuccess": {
+    "message": "✓ Đã đồng bộ!"
+  }
+}

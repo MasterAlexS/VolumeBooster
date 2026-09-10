@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "വോളിയം ബൂസ്റ്റർ" }, "extDesc": { "message": "വോളിയം വർദ്ധിപ്പിക്കുക." }, "standardMode": { "message": "സ്റ്റാൻഡേർഡ്" }, "extremeMode": { "message": "എക്സ്ട്രീം" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "അവസാനത്തേത് പ്രയോഗിക്കുക" }, "loading": { "message": "ലോഡുചെയ്യുന്നു..." }, "activeOn": { "message": "സജീവം: " }, "activeCurrent": { "message": "സജീവം: നിലവിലെ പേജ്" }, "errorNoTab": { "message": "പിശക്: സജീവ ടാബ് ഇല്ല" }, "themeToggleTitle": { "message": "ലൈറ്റ്/ഡാർക്ക് മോഡ്" }, "boostToggleTitle": { "message": "ബൂസ്റ്റ് ഓൺ/ഓഫ്" }, "extremeToggleTitle": { "message": "എക്സ്ട്രീം മോഡ്" }, "resetBtnTitle": { "message": "100% ആയി സജ്ജീകരിക്കുക" }, 
-  "langSelectTitle": { "message": "ഭാഷ മാറ്റുക" } }
-
+{
+  "extName": {
+    "message": "വോളിയം ബൂസ്റ്റർ"
+  },
+  "extDesc": {
+    "message": "വോളിയം വർദ്ധിപ്പിക്കുക."
+  },
+  "standardMode": {
+    "message": "സ്റ്റാൻഡേർഡ്"
+  },
+  "extremeMode": {
+    "message": "എക്സ്ട്രീം"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "അവസാനത്തേത് പ്രയോഗിക്കുക"
+  },
+  "loading": {
+    "message": "ലോഡുചെയ്യുന്നു..."
+  },
+  "activeOn": {
+    "message": "സജീവം: "
+  },
+  "activeCurrent": {
+    "message": "സജീവം: നിലവിലെ പേജ്"
+  },
+  "errorNoTab": {
+    "message": "പിശക്: സജീവ ടാബ് ഇല്ല"
+  },
+  "themeToggleTitle": {
+    "message": "ലൈറ്റ്/ഡാർക്ക് മോഡ്"
+  },
+  "boostToggleTitle": {
+    "message": "ബൂസ്റ്റ് ഓൺ/ഓഫ്"
+  },
+  "extremeToggleTitle": {
+    "message": "എക്സ്ട്രീം മോഡ്"
+  },
+  "resetBtnTitle": {
+    "message": "100% ആയി സജ്ജീകരിക്കുക"
+  },
+  "langSelectTitle": {
+    "message": "ഭാഷ മാറ്റുക"
+  },
+  "syncTabsText": {
+    "message": "എല്ലാ ടാബുകളും സമന്വയിപ്പിക്കുക"
+  },
+  "syncTabsTitle": {
+    "message": "ഈ ഡൊമെയ്‌നിലെ എല്ലാ ടാബുകൾക്കും നിലവിലെ വോളിയം പ്രയോഗിക്കുക"
+  },
+  "syncSuccess": {
+    "message": "✓ സമന്വയിപ്പിച്ചു!"
+  }
+}

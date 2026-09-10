@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Booster di Volume" }, "extDesc": { "message": "Aumenta il volume della scheda dal 600% al 1000% utilizzando i modi Standard e Estremo." }, "standardMode": { "message": "Standard" }, "extremeMode": { "message": "Estremo" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Applica Ultimo" }, "loading": { "message": "Caricamento..." }, "activeOn": { "message": "Attivo su: " }, "activeCurrent": { "message": "Attivo su: pagina corrente" }, "errorNoTab": { "message": "Errore: Nessuna scheda attiva" }, "themeToggleTitle": { "message": "Modalità Chiara/Scura" }, "boostToggleTitle": { "message": "Amplificazione ON/OFF" }, "extremeToggleTitle": { "message": "Modo Estremo 1000%" }, "resetBtnTitle": { "message": "Imposta al 100%" }, 
-  "langSelectTitle": { "message": "Cambia Lingua" } }
-
+{
+  "extName": {
+    "message": "Booster di Volume"
+  },
+  "extDesc": {
+    "message": "Aumenta il volume della scheda dal 600% al 1000% utilizzando i modi Standard e Estremo."
+  },
+  "standardMode": {
+    "message": "Standard"
+  },
+  "extremeMode": {
+    "message": "Estremo"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Applica Ultimo"
+  },
+  "loading": {
+    "message": "Caricamento..."
+  },
+  "activeOn": {
+    "message": "Attivo su: "
+  },
+  "activeCurrent": {
+    "message": "Attivo su: pagina corrente"
+  },
+  "errorNoTab": {
+    "message": "Errore: Nessuna scheda attiva"
+  },
+  "themeToggleTitle": {
+    "message": "Modalità Chiara/Scura"
+  },
+  "boostToggleTitle": {
+    "message": "Amplificazione ON/OFF"
+  },
+  "extremeToggleTitle": {
+    "message": "Modo Estremo 1000%"
+  },
+  "resetBtnTitle": {
+    "message": "Imposta al 100%"
+  },
+  "langSelectTitle": {
+    "message": "Cambia Lingua"
+  },
+  "syncTabsText": {
+    "message": "Sincronizza tutte le schede"
+  },
+  "syncTabsTitle": {
+    "message": "Applica il volume corrente a tutte le schede di questo dominio"
+  },
+  "syncSuccess": {
+    "message": "✓ Sincronizzato!"
+  }
+}

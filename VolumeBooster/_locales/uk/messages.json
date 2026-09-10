@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Підсилювач Гучності" }, "extDesc": { "message": "Збільште гучність." }, "standardMode": { "message": "Стандарт" }, "extremeMode": { "message": "Екстрим" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Застосувати" }, "loading": { "message": "Завантаження..." }, "activeOn": { "message": "Активно на: " }, "activeCurrent": { "message": "Активно на: поточній сторінці" }, "errorNoTab": { "message": "Помилка: Немає активної вкладки" }, "themeToggleTitle": { "message": "Світлий/Темний Режим" }, "boostToggleTitle": { "message": "УВІМК/ВИМК" }, "extremeToggleTitle": { "message": "Екстрим Режим" }, "resetBtnTitle": { "message": "100%" }, 
-  "langSelectTitle": { "message": "Змінити мову" } }
-
+{
+  "extName": {
+    "message": "Підсилювач Гучності"
+  },
+  "extDesc": {
+    "message": "Збільште гучність."
+  },
+  "standardMode": {
+    "message": "Стандарт"
+  },
+  "extremeMode": {
+    "message": "Екстрим"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Застосувати"
+  },
+  "loading": {
+    "message": "Завантаження..."
+  },
+  "activeOn": {
+    "message": "Активно на: "
+  },
+  "activeCurrent": {
+    "message": "Активно на: поточній сторінці"
+  },
+  "errorNoTab": {
+    "message": "Помилка: Немає активної вкладки"
+  },
+  "themeToggleTitle": {
+    "message": "Світлий/Темний Режим"
+  },
+  "boostToggleTitle": {
+    "message": "УВІМК/ВИМК"
+  },
+  "extremeToggleTitle": {
+    "message": "Екстрим Режим"
+  },
+  "resetBtnTitle": {
+    "message": "100%"
+  },
+  "langSelectTitle": {
+    "message": "Змінити мову"
+  },
+  "syncTabsText": {
+    "message": "Синхронізувати всі вкладки"
+  },
+  "syncTabsTitle": {
+    "message": "Застосувати поточну гучність до всіх вкладок у цьому домені"
+  },
+  "syncSuccess": {
+    "message": "✓ Синхронізовано!"
+  }
+}

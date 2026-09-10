@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Ses Yükseltici" }, "extDesc": { "message": "Sesini %600 ile %1000 arasına çıkarın." }, "standardMode": { "message": "Standart" }, "extremeMode": { "message": "Ekstrem" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Sonuncuyu Uygula" }, "loading": { "message": "Yükleniyor..." }, "activeOn": { "message": "Şurada aktif: " }, "activeCurrent": { "message": "Şurada aktif: geçerli sayfa" }, "errorNoTab": { "message": "Hata: Aktif sekme bulunamadı" }, "themeToggleTitle": { "message": "Açık/Koyu Mod" }, "boostToggleTitle": { "message": "Yükseltici AÇIK/KAPALI" }, "extremeToggleTitle": { "message": "%1000 Ekstrem Mod" }, "resetBtnTitle": { "message": "%100 Ayarla" }, 
-  "langSelectTitle": { "message": "Dili Değiştir" } }
-
+{
+  "extName": {
+    "message": "Ses Yükseltici"
+  },
+  "extDesc": {
+    "message": "Sesini %600 ile %1000 arasına çıkarın."
+  },
+  "standardMode": {
+    "message": "Standart"
+  },
+  "extremeMode": {
+    "message": "Ekstrem"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Sonuncuyu Uygula"
+  },
+  "loading": {
+    "message": "Yükleniyor..."
+  },
+  "activeOn": {
+    "message": "Şurada aktif: "
+  },
+  "activeCurrent": {
+    "message": "Şurada aktif: geçerli sayfa"
+  },
+  "errorNoTab": {
+    "message": "Hata: Aktif sekme bulunamadı"
+  },
+  "themeToggleTitle": {
+    "message": "Açık/Koyu Mod"
+  },
+  "boostToggleTitle": {
+    "message": "Yükseltici AÇIK/KAPALI"
+  },
+  "extremeToggleTitle": {
+    "message": "%1000 Ekstrem Mod"
+  },
+  "resetBtnTitle": {
+    "message": "%100 Ayarla"
+  },
+  "langSelectTitle": {
+    "message": "Dili Değiştir"
+  },
+  "syncTabsText": {
+    "message": "Tüm Sekmeleri Senkronize Et"
+  },
+  "syncTabsTitle": {
+    "message": "Mevcut sesi bu alandaki tüm sekmelere uygula"
+  },
+  "syncSuccess": {
+    "message": "✓ Senkronize edildi!"
+  }
+}

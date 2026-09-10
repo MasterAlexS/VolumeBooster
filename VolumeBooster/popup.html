@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -12,7 +14,8 @@
         <div id="activeTabInfo" class="tab-info" data-i18n="loading">Loading...</div>
       </div>
       <div class="header-controls">
-        <button id="themeToggle" class="icon-btn" data-i18n-title="themeToggleTitle" title="Toggle Light/Dark Mode">🌓</button>
+        <button id="themeToggle" class="icon-btn" data-i18n-title="themeToggleTitle"
+          title="Toggle Light/Dark Mode">🌓</button>
         <label class="switch" data-i18n-title="boostToggleTitle" title="Toggle Boost ON/OFF">
           <input type="checkbox" id="masterToggle">
           <span class="slider round"></span>
@@ -36,10 +39,16 @@
 
     <div class="button-group">
       <button id="resetBtn" data-i18n-title="resetBtnTitle" title="Set to 100%">100%</button>
-      <button id="applyLastBtn"><span data-i18n="applyLastBtn">Apply Last</span>: <span id="lastVolText">100%</span></button>
+      <button id="applyLastBtn"><span data-i18n="applyLastBtn">Apply Last</span>: <span
+          id="lastVolText">100%</span></button>
     </div>
-    
-    <div class="footer-controls">
+
+    <div style="margin-top: 8px;">
+      <button id="syncDomainBtn" class="lang-select" data-i18n="syncTabsText" data-i18n-title="syncTabsTitle"
+        title="Apply current volume to all tabs on this domain">Sync All Tabs</button>
+    </div>
+
+    <div class="footer-controls" style="margin-top: 8px;">
       <select id="langSelect" class="lang-select" data-i18n-title="langSelectTitle" title="Change Language"></select>
     </div>
   </div>

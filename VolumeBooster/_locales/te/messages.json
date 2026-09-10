@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "వాల్యూమ్ బూస్టర్" }, "extDesc": { "message": "వాల్యూమ్ పెంచండి." }, "standardMode": { "message": "సాధారణ" }, "extremeMode": { "message": "తీవ్రమైన" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "చివరిగా వర్తించు" }, "loading": { "message": "లోడ్ అవుతోంది..." }, "activeOn": { "message": "సక్రియం: " }, "activeCurrent": { "message": "సక్రియం: ప్రస్తుత పేజీ" }, "errorNoTab": { "message": "లోపం: సక్రియ ట్యాబ్ లేదు" }, "themeToggleTitle": { "message": "లైట్/డార్క్ మోడ్" }, "boostToggleTitle": { "message": "బూస్ట్ ఆన్/ఆఫ్" }, "extremeToggleTitle": { "message": "తీవ్రమైన మోడ్" }, "resetBtnTitle": { "message": "100% సెట్ చేయండి" }, 
-  "langSelectTitle": { "message": "భాషను మార్చండి" } }
-
+{
+  "extName": {
+    "message": "వాల్యూమ్ బూస్టర్"
+  },
+  "extDesc": {
+    "message": "వాల్యూమ్ పెంచండి."
+  },
+  "standardMode": {
+    "message": "సాధారణ"
+  },
+  "extremeMode": {
+    "message": "తీవ్రమైన"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "చివరిగా వర్తించు"
+  },
+  "loading": {
+    "message": "లోడ్ అవుతోంది..."
+  },
+  "activeOn": {
+    "message": "సక్రియం: "
+  },
+  "activeCurrent": {
+    "message": "సక్రియం: ప్రస్తుత పేజీ"
+  },
+  "errorNoTab": {
+    "message": "లోపం: సక్రియ ట్యాబ్ లేదు"
+  },
+  "themeToggleTitle": {
+    "message": "లైట్/డార్క్ మోడ్"
+  },
+  "boostToggleTitle": {
+    "message": "బూస్ట్ ఆన్/ఆఫ్"
+  },
+  "extremeToggleTitle": {
+    "message": "తీవ్రమైన మోడ్"
+  },
+  "resetBtnTitle": {
+    "message": "100% సెట్ చేయండి"
+  },
+  "langSelectTitle": {
+    "message": "భాషను మార్చండి"
+  },
+  "syncTabsText": {
+    "message": "అన్ని ట్యాబ్‌లను సింక్ చేయి"
+  },
+  "syncTabsTitle": {
+    "message": "ఈ డొమైన్‌లోని అన్ని ట్యాబ్‌లకు ప్రస్తుత వాల్యూమ్‌ను వర్తింపజేయి"
+  },
+  "syncSuccess": {
+    "message": "✓ సింక్ చేయబడింది!"
+  }
+}

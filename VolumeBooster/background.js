@@ -14,28 +14,42 @@ browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
   else if (message.action === "getContentSettings") {
     const tabId = sender.tab.id;
-    let storageKey = `tab_${tabId}`;
-    try {
-      if (sender.url) {
-        const url = new URL(sender.url);
-        if (url.hostname) {
-          storageKey = `domain_${url.hostname}`;
-        }
-      }
-    } catch (e) {
-      // Keep fallback
-    }
+    const tabKey = `tab_${tabId}`;
 
-    browser.storage.local.get(storageKey).then(res => {
-      const state = res[storageKey];
+    browser.storage.local.get(tabKey).then(res => {
+      const state = res[tabKey];
       if (state) {
         sendResponse(state);
         updateTabBadge(tabId, state.enabled, state.volume);
       } else {
-        sendResponse({ enabled: false, volume: 100 });
+        sendResponse({ enabled: false, volume: 100, extremeMode: false });
       }
     });
     return true;
+  }
+  
+  else if (message.action === "syncDomainTabs") {
+    const targetDomain = message.domain;
+    const state = message.state;
+    
+    browser.tabs.query({}).then(tabs => {
+      tabs.forEach(tab => {
+        try {
+          if (!tab.url) return;
+          const urlObj = new URL(tab.url);
+          if (urlObj.hostname === targetDomain) {
+            const tabKey = `tab_${tab.id}`;
+            browser.storage.local.set({ [tabKey]: state });
+            updateTabBadge(tab.id, state.enabled, state.volume);
+            browser.tabs.sendMessage(tab.id, {
+              action: "updateVolume",
+              volume: state.volume,
+              enabled: state.enabled
+            }).catch(() => {});
+          }
+        } catch (e) {}
+      });
+    });
   }
 });
 
@@ -65,5 +79,5 @@ function updateTabBadge(tabId, enabled, volume) {
 }
 
 browser.tabs.onRemoved.addListener((tabId) => {
-  browser.storage.local.remove("tab_$tabId");
+  browser.storage.local.remove(`tab_${tabId}`);
 });

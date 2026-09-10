@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Ενισχυτής Ήχου" }, "extDesc": { "message": "Αυξήστε την ένταση από 600% σε 1000%." }, "standardMode": { "message": "Κανονική" }, "extremeMode": { "message": "Ακραία" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Εφαρμογή Τελευταίου" }, "loading": { "message": "Φόρτωση..." }, "activeOn": { "message": "Ενεργό στο: " }, "activeCurrent": { "message": "Ενεργό σε: τρέχουσα σελίδα" }, "errorNoTab": { "message": "Σφάλμα: Δεν βρέθηκε ενεργή καρτέλα" }, "themeToggleTitle": { "message": "Εναλλαγή Φωτεινής/Σκοτεινής" }, "boostToggleTitle": { "message": "Εναλλαγή Ενίσχυσης ON/OFF" }, "extremeToggleTitle": { "message": "Εναλλαγή Ακραίας Λειτουργίας 1000%" }, "resetBtnTitle": { "message": "Ορισμός σε 100%" }, 
-  "langSelectTitle": { "message": "Αλλαγή Γλώσσας" } }
-
+{
+  "extName": {
+    "message": "Ενισχυτής Ήχου"
+  },
+  "extDesc": {
+    "message": "Αυξήστε την ένταση από 600% σε 1000%."
+  },
+  "standardMode": {
+    "message": "Κανονική"
+  },
+  "extremeMode": {
+    "message": "Ακραία"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Εφαρμογή Τελευταίου"
+  },
+  "loading": {
+    "message": "Φόρτωση..."
+  },
+  "activeOn": {
+    "message": "Ενεργό στο: "
+  },
+  "activeCurrent": {
+    "message": "Ενεργό σε: τρέχουσα σελίδα"
+  },
+  "errorNoTab": {
+    "message": "Σφάλμα: Δεν βρέθηκε ενεργή καρτέλα"
+  },
+  "themeToggleTitle": {
+    "message": "Εναλλαγή Φωτεινής/Σκοτεινής"
+  },
+  "boostToggleTitle": {
+    "message": "Εναλλαγή Ενίσχυσης ON/OFF"
+  },
+  "extremeToggleTitle": {
+    "message": "Εναλλαγή Ακραίας Λειτουργίας 1000%"
+  },
+  "resetBtnTitle": {
+    "message": "Ορισμός σε 100%"
+  },
+  "langSelectTitle": {
+    "message": "Αλλαγή Γλώσσας"
+  },
+  "syncTabsText": {
+    "message": "Συγχρονισμός όλων των καρτελών"
+  },
+  "syncTabsTitle": {
+    "message": "Εφαρμογή της τρέχουσας έντασης σε όλες τις καρτέλες σε αυτόν τον τομέα"
+  },
+  "syncSuccess": {
+    "message": "✓ Συγχρονίστηκε!"
+  }
+}

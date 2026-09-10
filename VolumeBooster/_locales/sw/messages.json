@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Kikuza Sauti" }, "extDesc": { "message": "Ongeza sauti." }, "standardMode": { "message": "Kawaida" }, "extremeMode": { "message": "Kali" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Weka ya Mwisho" }, "loading": { "message": "Inapakia..." }, "activeOn": { "message": "Imewashwa: " }, "activeCurrent": { "message": "Imewashwa: ukurasa wa sasa" }, "errorNoTab": { "message": "Hitilafu: Hakuna tabo inayotumika" }, "themeToggleTitle": { "message": "Modi ya Giza/Mwangaza" }, "boostToggleTitle": { "message": "Washa/Zima Kikuza" }, "extremeToggleTitle": { "message": "Modi Kali" }, "resetBtnTitle": { "message": "Weka 100%" }, 
-  "langSelectTitle": { "message": "Badilisha Lugha" } }
-
+{
+  "extName": {
+    "message": "Kikuza Sauti"
+  },
+  "extDesc": {
+    "message": "Ongeza sauti."
+  },
+  "standardMode": {
+    "message": "Kawaida"
+  },
+  "extremeMode": {
+    "message": "Kali"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Weka ya Mwisho"
+  },
+  "loading": {
+    "message": "Inapakia..."
+  },
+  "activeOn": {
+    "message": "Imewashwa: "
+  },
+  "activeCurrent": {
+    "message": "Imewashwa: ukurasa wa sasa"
+  },
+  "errorNoTab": {
+    "message": "Hitilafu: Hakuna tabo inayotumika"
+  },
+  "themeToggleTitle": {
+    "message": "Modi ya Giza/Mwangaza"
+  },
+  "boostToggleTitle": {
+    "message": "Washa/Zima Kikuza"
+  },
+  "extremeToggleTitle": {
+    "message": "Modi Kali"
+  },
+  "resetBtnTitle": {
+    "message": "Weka 100%"
+  },
+  "langSelectTitle": {
+    "message": "Badilisha Lugha"
+  },
+  "syncTabsText": {
+    "message": "Sawazisha Vichupo Vyote"
+  },
+  "syncTabsTitle": {
+    "message": "Tumia sauti ya sasa kwenye vichupo vyote kwenye kikoa hiki"
+  },
+  "syncSuccess": {
+    "message": "✓ Imesawazishwa!"
+  }
+}

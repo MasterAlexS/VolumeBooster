@@ -1,3 +1,56 @@
-﻿{ "extName": { "message": "Појачавач Звука" }, "extDesc": { "message": "Повећајте јачину звука." }, "standardMode": { "message": "Стандардно" }, "extremeMode": { "message": "Екстремно" }, "resetBtn": { "message": "100%" }, "applyLastBtn": { "message": "Примени Последње" }, "loading": { "message": "Учитавање..." }, "activeOn": { "message": "Активно на: " }, "activeCurrent": { "message": "Активно на: тренутној страници" }, "errorNoTab": { "message": "Грешка: Нема активне картице" }, "themeToggleTitle": { "message": "Светли/Тамни Режим" }, "boostToggleTitle": { "message": "УКЉ/ИСКЉ" }, "extremeToggleTitle": { "message": "Екстремни Режим" }, "resetBtnTitle": { "message": "100%" }, 
-  "langSelectTitle": { "message": "Промени језик" } }
-
+{
+  "extName": {
+    "message": "Појачавач Звука"
+  },
+  "extDesc": {
+    "message": "Повећајте јачину звука."
+  },
+  "standardMode": {
+    "message": "Стандардно"
+  },
+  "extremeMode": {
+    "message": "Екстремно"
+  },
+  "resetBtn": {
+    "message": "100%"
+  },
+  "applyLastBtn": {
+    "message": "Примени Последње"
+  },
+  "loading": {
+    "message": "Учитавање..."
+  },
+  "activeOn": {
+    "message": "Активно на: "
+  },
+  "activeCurrent": {
+    "message": "Активно на: тренутној страници"
+  },
+  "errorNoTab": {
+    "message": "Грешка: Нема активне картице"
+  },
+  "themeToggleTitle": {
+    "message": "Светли/Тамни Режим"
+  },
+  "boostToggleTitle": {
+    "message": "УКЉ/ИСКЉ"
+  },
+  "extremeToggleTitle": {
+    "message": "Екстремни Режим"
+  },
+  "resetBtnTitle": {
+    "message": "100%"
+  },
+  "langSelectTitle": {
+    "message": "Промени језик"
+  },
+  "syncTabsText": {
+    "message": "Синхронизуј све картице"
+  },
+  "syncTabsTitle": {
+    "message": "Примени тренутну јачину звука на све картице на овом домену"
+  },
+  "syncSuccess": {
+    "message": "✓ Синхронизовано!"
+  }
+}

@@ -23,7 +23,8 @@ This data never leaves your computer. It is entirely under your control and can 
 ## 3. Required Permissions Explained
 The Extension requests the following minimal permissions to function:
 - **`activeTab`**: Allows the Extension to temporarily interact with the current tab solely to connect to the audio stream for volume amplification, and to read the domain name for saving your volume preference locally. It does not monitor your activity across tabs.
-- **`storage`**: Used exclusively to save your volume levels and theme preferences locally on your hard drive.
+- **`storage`**: Used exclusively to save your volume levels, theme, and language preferences locally on your hard drive.
+- **Host Permission (`<all_urls>`)**: Strictly used to inject the audio processing script into the webpage (and its iframes) so it can locate and amplify the `<video>` or `<audio>` elements.
 
 ## 4. Third-Party Services
 We do not integrate any third-party tracking scripts, analytics tools, or advertising networks into the Extension.

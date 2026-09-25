@@ -14,7 +14,8 @@ A powerful, lightweight, and strictly privacy-focused volume booster extension f
 * **Two Boosting Modes:**
     * 🟢 **Standard Mode:** Boost up to **600%** (Safe, high-quality amplification).
     * 🔴 **Extreme Mode:** Unlock the limit up to **1000%** for those ultra-quiet videos.
-* **Smart Domain Memory:** The extension remembers your volume settings for specific websites (e.g., youtube.com) rather than per-tab. If you close a tab and come back later, your volume preferences remain intact.
+* **Smart Tab Isolation & Passive Memory:** Each tab operates completely independently to prevent unwanted volume blasts when browsing. However, the extension remembers the last volume you used on specific websites (e.g., youtube.com), allowing you to quickly restore it with the handy **"Apply Last"** button.
+* **Sync All Tabs:** Have multiple tabs of the same website open? Change the volume on one tab and click **"Sync All Tabs"** to instantly apply that exact volume to all other tabs on the same domain.
 * **Iframe Support:** Seamlessly boosts audio for embedded video players (e.g., YouTube videos embedded on third-party blogs or news sites).
 * **Smart Audio Radar (CPU Optimized):** Automatically detects new videos dynamically loaded on the page. When the boost is disabled, the radar completely shuts down to ensure **0% CPU usage**.
 * **Dynamic UI:**

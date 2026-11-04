@@ -1,4 +1,5 @@
 globalThis.browser = globalThis.browser || chrome;
+
 document.addEventListener("DOMContentLoaded", async () => {
   const masterToggle = document.getElementById("masterToggle");
   const limitToggle = document.getElementById("limitToggle");
@@ -10,11 +11,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   const themeToggle = document.getElementById("themeToggle");
   const lastVolText = document.getElementById("lastVolText");
   const langSelect = document.getElementById("langSelect");
+  const syncDomainBtn = document.getElementById("syncDomainBtn");
 
   const availableLangs = {
     "auto": "🌐 Auto (Browser)", "en": "🇬🇧 English", "ro": "🇷🇴 Română", "es": "🇪🇸 Español", "fr": "🇫🇷 Français",
     "de": "🇩🇪 Deutsch", "it": "🇮🇹 Italiano", "pt_BR": "🇧🇷 Português", "ru": "🇷🇺 Русский", "zh_CN": "🇨🇳 中文",
-    "ja": "🇯🇵 日本語", "ko": "🇰🇷 한국어", "ar": "🇸🇦 العربية", "hi": "🇮🇳 हिन्दी", "tr": "🇹🇷 Türkçe",
+    "zh_TW": "🇹🇼 繁體中文", "ja": "🇯🇵 日本語", "ko": "🇰🇷 한국어", "ar": "🇸🇦 العربية", "hi": "🇮🇳 हिन्दी", "tr": "🇹🇷 Türkçe",
     "nl": "🇳🇱 Nederlands", "pl": "🇵🇱 Polski", "sv": "🇸🇪 Svenska", "fi": "🇫🇮 Suomi", "da": "🇩🇰 Dansk",
     "no": "🇳🇴 Norsk", "el": "🇬🇷 Ελληνικά", "cs": "🇨🇿 Čeština", "hu": "🇭🇺 Magyar", "bg": "🇧🇬 Български",
     "uk": "🇺🇦 Українська", "hr": "🇭🇷 Hrvatski", "sk": "🇸🇰 Slovenčina", "sl": "🇸🇮 Slovenščina", "sr": "🇷🇸 Српски",
@@ -24,24 +26,30 @@ document.addEventListener("DOMContentLoaded", async () => {
     "kn": "🇮🇳 ಕನ್ನಡ", "ml": "🇮🇳 മലയാളം", "mr": "🇮🇳 मराठी", "ta": "🇮🇳 தமிழ்", "te": "🇮🇳 తెలుగు"
   };
 
-  // Populate langSelect
+  // Single DOM reflow using DocumentFragment
+  const fragment = document.createDocumentFragment();
   for (const [code, name] of Object.entries(availableLangs)) {
     const opt = document.createElement("option");
     opt.value = code;
     opt.textContent = name;
-    langSelect.appendChild(opt);
+    fragment.appendChild(opt);
   }
+  langSelect.appendChild(fragment);
 
-  const storageData = await browser.storage.local.get(["globalLastVolume", "themePreference", "languagePreference"]);
-  let globalLastVolume = storageData.globalLastVolume || 100;
+  const [storageData, tabs] = await Promise.all([
+    browser.storage.local.get(["themePreference", "languagePreference"]),
+    browser.tabs.query({ active: true, currentWindow: true })
+  ]);
+
   let isLightMode = storageData.themePreference === "light";
   let langPref = storageData.languagePreference || "auto";
 
   langSelect.value = langPref;
-
   if (isLightMode) document.body.classList.add("light-mode");
 
   let customMessages = null;
+  const i18nElements = document.querySelectorAll("[data-i18n]");
+  const i18nTitleElements = document.querySelectorAll("[data-i18n-title]");
 
   async function loadTranslations(lang) {
     if (lang === "auto") {
@@ -49,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
     try {
-      const url = browser.runtime.getURL("_locales/" + lang + "/messages.json");
+      const url = browser.runtime.getURL(`_locales/${lang}/messages.json`);
       const response = await fetch(url);
       customMessages = await response.json();
     } catch (e) {
@@ -66,12 +74,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function applyTranslations() {
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const msg = getMessage(el.getAttribute('data-i18n'));
+    i18nElements.forEach(el => {
+      const msg = getMessage(el.getAttribute("data-i18n"));
       if (msg) el.textContent = msg;
     });
-    document.querySelectorAll('[data-i18n-title]').forEach(el => {
-      const msg = getMessage(el.getAttribute('data-i18n-title'));
+    i18nTitleElements.forEach(el => {
+      const msg = getMessage(el.getAttribute("data-i18n-title"));
       if (msg) el.title = msg;
     });
   }
@@ -79,36 +87,12 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadTranslations(langPref);
   applyTranslations();
 
-  langSelect.addEventListener("change", async () => {
-    langPref = langSelect.value;
-    await browser.storage.local.set({ languagePreference: langPref });
-    await loadTranslations(langPref);
-    applyTranslations();
-    updateTabInfoDisplay(); // refresh dynamic domain text
-  });
-
-  const tabs = await browser.tabs.query({ active: true, currentWindow: true });
   const currentTab = tabs[0];
-
   let tabId = null;
   let tabKey = null;
   let domainKey = null;
   let urlObj = null;
   let domainVolume = 100;
-
-  function updateTabInfoDisplay() {
-    if (!currentTab) {
-      activeTabInfo.textContent = getMessage("errorNoTab") || "Error: No active tab found";
-      return;
-    }
-    const activeOnMsg = getMessage("activeOn") || "Active on: ";
-    const activeCurrentMsg = getMessage("activeCurrent") || "Active on: current page";
-    if (urlObj && urlObj.hostname) {
-      activeTabInfo.textContent = activeOnMsg + urlObj.hostname.replace(/^www\./, '');
-    } else {
-      activeTabInfo.textContent = activeCurrentMsg;
-    }
-  }
 
   if (currentTab) {
     tabId = currentTab.id;
@@ -118,7 +102,21 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (urlObj.hostname) {
         domainKey = "domain_" + urlObj.hostname;
       }
-    } catch (e) { }
+    } catch (e) {}
+  }
+
+  function updateTabInfoDisplay() {
+    if (!currentTab) {
+      activeTabInfo.textContent = getMessage("errorNoTab") || "Error: No active tab found";
+      return;
+    }
+    const activeOnMsg = getMessage("activeOn") || "Active on: ";
+    const activeCurrentMsg = getMessage("activeCurrent") || "Active on: current page";
+    if (urlObj && urlObj.hostname) {
+      activeTabInfo.textContent = activeOnMsg + urlObj.hostname.replace(/^www\./, "");
+    } else {
+      activeTabInfo.textContent = activeCurrentMsg;
+    }
   }
 
   updateTabInfoDisplay();
@@ -126,14 +124,14 @@ document.addEventListener("DOMContentLoaded", async () => {
   let tabState = { enabled: false, volume: 100, extremeMode: false };
 
   if (tabKey) {
-    let keysToGet = [tabKey];
+    const keysToGet = [tabKey];
     if (domainKey) keysToGet.push(domainKey);
 
     const tabAndDomainData = await browser.storage.local.get(keysToGet);
     if (tabAndDomainData[tabKey]) {
       tabState = tabAndDomainData[tabKey];
     }
-    if (domainKey && tabAndDomainData[domainKey]) {
+    if (domainKey && tabAndDomainData[domainKey] && tabAndDomainData[domainKey].volume !== 100) {
       domainVolume = tabAndDomainData[domainKey].volume;
     }
   }
@@ -142,8 +140,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   limitToggle.checked = tabState.extremeMode;
   volumeSlider.max = tabState.extremeMode ? "1000" : "600";
   volumeSlider.value = tabState.volume;
-
-  updateUIText();
 
   function updateUIText(val = null) {
     const currentVal = val !== null ? val : parseInt(volumeSlider.value, 10);
@@ -162,20 +158,28 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dynamicColor = `hsl(${hue}, 100%, ${lightness}%)`;
     volumeValue.style.color = dynamicColor;
     volumeValue.style.textShadow = `0 0 12px hsla(${hue}, 100%, ${lightness}%, 0.4)`;
-    volumeValue.className = "";
-    document.documentElement.style.setProperty('--dynamic-accent', dynamicColor);
+    document.documentElement.style.setProperty("--dynamic-accent", dynamicColor);
 
     if (lastVolText) lastVolText.textContent = domainVolume + "%";
   }
 
+  updateUIText();
+
+  langSelect.addEventListener("change", async () => {
+    langPref = langSelect.value;
+    await browser.storage.local.set({ languagePreference: langPref });
+    await loadTranslations(langPref);
+    applyTranslations();
+    updateTabInfoDisplay();
+  });
+
   async function syncState() {
     if (!tabKey) return;
-    const currentVol = parseInt(volumeSlider.value);
+    const currentVol = parseInt(volumeSlider.value, 10);
     const isEnabled = masterToggle.checked;
     const isExtreme = limitToggle.checked;
 
     tabState = { enabled: isEnabled, volume: currentVol, extremeMode: isExtreme };
-
     const dataToSave = { [tabKey]: tabState };
 
     if (domainKey && currentVol !== 100) {
@@ -183,48 +187,43 @@ document.addEventListener("DOMContentLoaded", async () => {
       domainVolume = currentVol;
     }
 
-    if (isEnabled && currentVol !== 100) {
-      globalLastVolume = currentVol;
-      dataToSave.globalLastVolume = globalLastVolume;
-    }
-
     await browser.storage.local.set(dataToSave);
+    updateUIText(currentVol);
 
-    updateUIText();
-
-    try {
-      await browser.tabs.sendMessage(tabId, {
+    if (tabId) {
+      browser.tabs.sendMessage(tabId, {
         action: "updateVolume",
         volume: currentVol,
         enabled: isEnabled
-      });
-    } catch (err) { }
+      }).catch(() => {});
 
-    browser.runtime.sendMessage({
-      action: "updateBadge",
-      tabId: tabId,
-      volume: currentVol,
-      enabled: isEnabled
-    });
+      browser.runtime.sendMessage({
+        action: "updateBadge",
+        tabId: tabId,
+        volume: currentVol,
+        enabled: isEnabled
+      });
+    }
   }
 
-  const syncDomainBtn = document.getElementById("syncDomainBtn");
+  let syncBtnTimeout = null;
   if (syncDomainBtn) {
     if (!domainKey) {
       syncDomainBtn.parentElement.style.display = "none";
     } else {
       syncDomainBtn.addEventListener("click", () => {
-        const currentVol = parseInt(volumeSlider.value);
+        const currentVol = parseInt(volumeSlider.value, 10);
         const isEnabled = masterToggle.checked;
         browser.runtime.sendMessage({
           action: "syncDomainTabs",
           domain: urlObj.hostname,
           state: { enabled: isEnabled, volume: currentVol, extremeMode: limitToggle.checked }
         });
-        const originalText = syncDomainBtn.textContent;
+
+        clearTimeout(syncBtnTimeout);
         syncDomainBtn.textContent = getMessage("syncSuccess") || "\u2713 Synced!";
-        setTimeout(() => {
-          syncDomainBtn.textContent = originalText;
+        syncBtnTimeout = setTimeout(() => {
+          syncDomainBtn.textContent = getMessage("syncTabsText") || "Sync All Tabs";
         }, 1500);
       });
     }
@@ -237,45 +236,64 @@ document.addEventListener("DOMContentLoaded", async () => {
     updateUIText();
   });
 
-  volumeSlider.addEventListener("input", async () => {
+  let rafId = null;
+  volumeSlider.addEventListener("input", () => {
     const currentVol = parseInt(volumeSlider.value, 10);
     masterToggle.checked = (currentVol !== 100);
+    if (domainKey && currentVol !== 100) {
+      domainVolume = currentVol;
+    }
     updateUIText(currentVol);
 
-    browser.runtime.sendMessage({
-      action: "updateBadge",
-      tabId: tabId,
-      volume: currentVol,
-      enabled: masterToggle.checked
-    });
+    if (rafId) return;
+    rafId = requestAnimationFrame(() => {
+      rafId = null;
+      if (!tabId) return;
+      const vol = parseInt(volumeSlider.value, 10);
+      const enabled = masterToggle.checked;
 
-    try {
-      await browser.tabs.sendMessage(tabId, {
-        action: "updateVolume",
-        volume: currentVol,
-        enabled: masterToggle.checked
+      browser.runtime.sendMessage({
+        action: "updateBadge",
+        tabId: tabId,
+        volume: vol,
+        enabled: enabled
       });
-    } catch (err) { }
+
+      browser.tabs.sendMessage(tabId, {
+        action: "updateVolume",
+        volume: vol,
+        enabled: enabled
+      }).catch(() => {});
+    });
   });
 
   volumeSlider.addEventListener("change", () => syncState());
+
   masterToggle.addEventListener("change", () => {
     if (parseInt(volumeSlider.value, 10) === 100) masterToggle.checked = false;
     syncState();
   });
+
   limitToggle.addEventListener("change", () => {
     const isExtreme = limitToggle.checked;
     volumeSlider.max = isExtreme ? "1000" : "600";
-    if (!isExtreme && parseInt(volumeSlider.value) > 600) volumeSlider.value = "600";
+    if (!isExtreme && parseInt(volumeSlider.value, 10) > 600) {
+      volumeSlider.value = "600";
+    }
     syncState();
   });
+
   applyLastBtn.addEventListener("click", () => {
-    let volToApply = domainVolume;
-    if (volToApply > 600) { limitToggle.checked = true; volumeSlider.max = "1000"; }
+    const volToApply = domainVolume;
+    if (volToApply > 600) {
+      limitToggle.checked = true;
+      volumeSlider.max = "1000";
+    }
     volumeSlider.value = volToApply;
     masterToggle.checked = (volToApply !== 100);
     syncState();
   });
+
   resetBtn.addEventListener("click", () => {
     volumeSlider.value = "100";
     masterToggle.checked = false;

@@ -1,40 +1,69 @@
 globalThis.browser = globalThis.browser || chrome;
+
 let audioCtx = null;
 let gainNode = null;
-let connectedElements = new WeakSet();
+const connectedElements = new WeakSet();
 let currentVolume = 100;
 let isBoostEnabled = false;
+let unlockListenersAttached = false;
+
+function resumeAudioContext() {
+  if (!audioCtx) return;
+  if (audioCtx.state === "suspended") {
+    attachUnlockListeners();
+    audioCtx.resume().then(() => {
+      if (audioCtx.state === "running") removeUnlockListeners();
+    }).catch(() => {});
+  } else if (audioCtx.state === "running") {
+    removeUnlockListeners();
+  }
+}
+
+function onVisibilityChange() {
+  if (document.visibilityState === "visible") resumeAudioContext();
+}
+
+function attachUnlockListeners() {
+  if (unlockListenersAttached) return;
+  unlockListenersAttached = true;
+  document.addEventListener("visibilitychange", onVisibilityChange);
+  document.addEventListener("click", resumeAudioContext, { passive: true });
+  document.addEventListener("keydown", resumeAudioContext, { passive: true });
+  document.addEventListener("pointerdown", resumeAudioContext, { passive: true });
+  document.addEventListener("touchstart", resumeAudioContext, { passive: true });
+}
+
+function removeUnlockListeners() {
+  if (!unlockListenersAttached) return;
+  unlockListenersAttached = false;
+  document.removeEventListener("visibilitychange", onVisibilityChange);
+  document.removeEventListener("click", resumeAudioContext);
+  document.removeEventListener("keydown", resumeAudioContext);
+  document.removeEventListener("pointerdown", resumeAudioContext);
+  document.removeEventListener("touchstart", resumeAudioContext);
+}
 
 function initAudioContext() {
   if (!audioCtx) {
-    audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AudioContextClass();
     gainNode = audioCtx.createGain();
     gainNode.connect(audioCtx.destination);
+    attachUnlockListeners();
   }
 }
 
 function updateGain() {
-  if (!gainNode) return;
+  if (!gainNode || !audioCtx) return;
   resumeAudioContext();
-  gainNode.gain.value = isBoostEnabled ? (currentVolume / 100) : 1;
+  const targetGain = isBoostEnabled ? (currentVolume / 100) : 1;
+  // Smooth 15ms exponential interpolation to prevent zipper noise when moving the slider
+  gainNode.gain.setTargetAtTime(targetGain, audioCtx.currentTime, 0.015);
 }
-
-function resumeAudioContext() {
-  if (audioCtx && audioCtx.state === 'suspended') {
-    audioCtx.resume().catch(() => { });
-  }
-}
-
-document.addEventListener("visibilitychange", () => {
-  if (document.visibilityState === 'visible') resumeAudioContext();
-});
-document.addEventListener("click", resumeAudioContext, { passive: true });
-document.addEventListener("keydown", resumeAudioContext, { passive: true });
 
 function hookMediaElements() {
-  const videos = document.getElementsByTagName('video');
-  const audios = document.getElementsByTagName('audio');
-
+  const videos = document.getElementsByTagName("video");
+  const audios = document.getElementsByTagName("audio");
   let newlyHooked = false;
 
   const processElement = (el) => {
@@ -57,24 +86,23 @@ function hookMediaElements() {
   if (newlyHooked) resumeAudioContext();
 }
 
-let hookTimeout;
+let hookTimeout = null;
 let observerInstance = null;
 
 function startObserver() {
   if (!observerInstance && document.body) {
     observerInstance = new MutationObserver((mutations) => {
       let hasPotentialMedia = false;
-      for (let mutation of mutations) {
-        for (let node of mutation.addedNodes) {
-          if (node.nodeName === 'VIDEO' || node.nodeName === 'AUDIO') {
+      for (const mutation of mutations) {
+        for (const node of mutation.addedNodes) {
+          if (node.nodeName === "VIDEO" || node.nodeName === "AUDIO") {
             hasPotentialMedia = true;
             break;
           }
-          if (node.getElementsByTagName) {
-            if (node.getElementsByTagName('video').length > 0 || node.getElementsByTagName('audio').length > 0) {
-              hasPotentialMedia = true;
-              break;
-            }
+          if (node.getElementsByTagName &&
+             (node.getElementsByTagName("video").length > 0 || node.getElementsByTagName("audio").length > 0)) {
+            hasPotentialMedia = true;
+            break;
           }
         }
         if (hasPotentialMedia) break;
@@ -82,9 +110,7 @@ function startObserver() {
 
       if (hasPotentialMedia) {
         clearTimeout(hookTimeout);
-        hookTimeout = setTimeout(() => {
-          hookMediaElements();
-        }, 300);
+        hookTimeout = setTimeout(hookMediaElements, 300);
       }
     });
     observerInstance.observe(document.body, { childList: true, subtree: true });
@@ -92,6 +118,8 @@ function startObserver() {
 }
 
 function stopObserver() {
+  clearTimeout(hookTimeout);
+  hookTimeout = null;
   if (observerInstance) {
     observerInstance.disconnect();
     observerInstance = null;
@@ -99,16 +127,17 @@ function stopObserver() {
 }
 
 async function autoInit() {
-  const settings = await browser.runtime.sendMessage({ action: "getContentSettings" });
-
-  if (settings && settings.enabled) {
-    currentVolume = settings.volume;
-    isBoostEnabled = true;
-    initAudioContext();
-    hookMediaElements();
-    updateGain();
-    startObserver();
-  }
+  try {
+    const settings = await browser.runtime.sendMessage({ action: "getContentSettings" });
+    if (settings && settings.enabled) {
+      currentVolume = settings.volume;
+      isBoostEnabled = true;
+      initAudioContext();
+      hookMediaElements();
+      updateGain();
+      startObserver();
+    }
+  } catch (e) {}
 }
 
 browser.runtime.onMessage.addListener((message) => {
@@ -129,7 +158,7 @@ browser.runtime.onMessage.addListener((message) => {
 });
 
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", autoInit);
+  document.addEventListener("DOMContentLoaded", autoInit, { once: true });
 } else {
   autoInit();
 }

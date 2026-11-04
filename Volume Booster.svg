@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="96 94 320 320" width="100%" height="100%">
+  <defs>
+    <!-- Gradient pentru difuzor și undele sonore -->
+    <linearGradient id="speakerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80f596" />
+      <stop offset="100%" stop-color="#62e87c" />
+    </linearGradient>
+
+    <!-- Gradient vertical pentru săgeata de Boost (Verde -> Galben -> Portocaliu -> Roșu) -->
+    <linearGradient id="boostArrowGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#28e070" />
+      <stop offset="28%" stop-color="#8ce828" />
+      <stop offset="52%" stop-color="#ffbe00" />
+      <stop offset="76%" stop-color="#ff4f19" />
+      <stop offset="100%" stop-color="#e60040" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. CORPUL DIFUZORULUI -->
+  <path d="M 132 196
+           H 162
+           L 232 145
+           Q 251 131 251 155
+           V 355
+           Q 251 379 232 365
+           L 162 314
+           H 132
+           Q 102 314 102 284
+           V 226
+           Q 102 196 132 196 Z" fill="url(#speakerGrad)" stroke="#193028" stroke-width="6.5" stroke-linejoin="round" />
+
+  <!-- 2. CALOTA CENTRALĂ (Domul de lângă difuzor) -->
+  <path d="M 258 223
+           C 291 223, 291 287, 258 287 Z" fill="url(#speakerGrad)" stroke="#193028" stroke-width="6.5" stroke-linejoin="round" />
+
+  <!-- 3. UNDELE SONORE (Background) -->
+  <!-- Unda 1 (Interioară completă) -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M 286 201 A 68 68 0 0 1 286 309" stroke="#193028" stroke-width="31" />
+    <path d="M 286 201 A 68 68 0 0 1 286 309" stroke="url(#speakerGrad)" stroke-width="18" />
+  </g>
+
+  <!-- Unda 2 (Mijlocie completă - trece continuu prin spatele săgeții) -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M 301 169 A 104 104 0 0 1 301 335" stroke="#193028" stroke-width="30" />
+    <path d="M 301 169 A 104 104 0 0 1 301 335" stroke="url(#speakerGrad)" stroke-width="17" />
+  </g>
+
+  <!-- Unda 3 (Exterioară) - Segmentul de sus -->
+  <g stroke-linecap="round" fill="none">
+    <path d="M 317 139 A 140 140 0 0 1 344 162" stroke="#193028" stroke-width="30" />
+    <path d="M 317 139 A 140 140 0 0 1 344 162" stroke="url(#speakerGrad)" stroke-width="17" />
+  </g>
+
+  <!-- 4. SĂGEATA DE BOOST (Foreground - vine peste Unda 2) -->
+  <path d="M 364 146
+           Q 370 136 376 146
+           L 408 202
+           Q 414 212 402 212
+           H 385
+           V 276
+           C 385 322, 362 358, 326 378
+           A 14 14 0 0 1 309 355
+           C 337 338, 354 310, 354 276
+           V 212
+           H 337
+           Q 325 212 331 202
+           Z" fill="url(#boostArrowGrad)" stroke="#193028" stroke-width="6.5" stroke-linejoin="round" />
+</svg>

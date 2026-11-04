@@ -1,8 +1,12 @@
+<p align="center">
+  <img src="Volume%20Booster.svg" alt="Volume Booster Logo" width="128" height="128">
+</p>
+
 # Volume Booster 🔊🚀
 
 A powerful, lightweight, and strictly privacy-focused volume booster extension for **Mozilla Firefox** and **Google Chrome**. Built natively with Manifest V3 and the Web Audio API, it allows you to amplify your browser's audio up to **1000%** with smart domain-based memory and absolute zero background resource drain.
 
-> **[TIP]**
+> [!TIP]
 > **Need more advanced audio controls?** Check out **[Sound Master](https://github.com/MasterAlexS/SoundMaster)**! 
 > It is an advanced extension built directly upon the highly-optimized core of **Volume Booster**, adding professional features like an Anti-Distortion Compressor, a Multi-Band Equalizer, and Audio Balance controls.
 
@@ -21,26 +25,30 @@ A powerful, lightweight, and strictly privacy-focused volume booster extension f
 * **Dynamic UI:**
     * **Glow Effect:** Visual feedback through a glowing percentage indicator that changes color based on the boost level.
     * **Theme Support:** Manual toggle for **Dark Mode** (Default) and **Light Mode**, saved to your preferences.
-* **Cross-Browser Native:** Fully styled and tested to look and perform identically on both Firefox and Chromium-based browsers (Chrome, Edge, Brave, ...).
+* **Cross-Browser Native (Big 3 Engines):** Engineered and tested to look and perform identically across all three major browser engines: **Blink** (Chrome, Edge, Brave, Opera, Vivaldi), **Gecko** (Firefox, LibreWolf, Zen, Waterfox), and **WebKit** (Safari, Orion Browser, GNOME Web / Epiphany).
 * **Privacy First:** No tracking, no data collection, and no external server calls. See our [Privacy Policy](PRIVACY.md) for full details.
 
 ---
 
 ## 🛠 Installation
 
-Because this extension is cross-browser compatible, you can install it manually on either Firefox or Chrome:
+Because this extension is cross-browser compatible, you can install it manually on any major browser engine:
 
-### **Mozilla Firefox**
+### **Mozilla Firefox (Gecko)**
 1. Go to `about:debugging#/runtime/this-firefox`.
 2. Click **Load Temporary Add-on...**.
 3. Select the `manifest.json` file from the extracted project folder.
 *(Note: For permanent Firefox installation, you must zip the files into an `.xpi` format, go to `about:config`, set `xpinstall.signatures.required` to `false`, and install it via `about:addons` > Install Add-on From File).*
 
-### **Google Chrome / Microsoft Edge / Brave / ...**
+### **Google Chrome / Microsoft Edge / Brave / Opera (Blink)**
 1. Download the repository as a ZIP and extract it to a folder.
 2. Open your browser and go to `chrome://extensions/` (or `edge://extensions/`).
 3. Turn on **Developer mode** (usually a toggle in the top-right corner).
 4. Click **Load unpacked** and select the folder you extracted in step 1.
+
+### **WebKit (Orion Browser / Safari / Epiphany)**
+1. **Orion Browser (macOS / iOS / Linux):** Open Orion Settings > Extensions, click **Install from disk** (or drag & drop the `.xpi` / `.zip`), and select the extension file or `manifest.json`.
+2. **Safari (macOS):** Can be packaged into a native Safari extension app using Apple's official `xcrun safari-web-extension-converter`.
 
 ---
 

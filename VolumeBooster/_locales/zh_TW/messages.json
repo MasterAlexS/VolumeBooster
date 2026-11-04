@@ -11,9 +11,6 @@
   "extremeMode": {
     "message": "极限"
   },
-  "resetBtn": {
-    "message": "100%"
-  },
   "applyLastBtn": {
     "message": "应用上一次"
   },

@@ -11,9 +11,6 @@
   "extremeMode": {
     "message": "エクストリーム"
   },
-  "resetBtn": {
-    "message": "100%"
-  },
   "applyLastBtn": {
     "message": "前回を適用"
   },

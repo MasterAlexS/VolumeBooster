@@ -13,10 +13,9 @@ The extension operates 100% locally on your machine and does not communicate wit
 
 ## 2. Information We Store Locally
 To provide a seamless experience, the Extension stores a minimal amount of configuration data directly on your device using the browser's native `storage` API:
-- **Active Tab States:** The volume level and on/off status are saved per individual tab (`tab_id`), ensuring tabs operate independently. This data is automatically deleted when you close the tab.
-- **Domain Volume Settings (Passive Memory):** The last volume percentage you used on a specific website (e.g., youtube.com). This is kept in passive memory so you can easily restore it using the "Apply Last" button.
+- **Active Tab States:** The volume level and on/off status are saved per individual tab (`tab_id`), ensuring tabs operate independently. This data is automatically deleted when you close the tab or restart the browser.
+- **Domain Volume Settings (Passive Memory):** The last volume percentage and mode you used on a specific website (e.g., youtube.com). This is kept in passive memory so you can easily restore it using the "Apply Last" button.
 - **Global Preferences:** Your chosen theme (light/dark mode) and interface language.
-- **Global State & Extreme Mode:** The last applied global volume level and whether the 1000% Extreme Mode is toggled on.
 
 This data never leaves your computer. It is entirely under your control and can be wiped at any time by clearing your browser's local extension data.
 

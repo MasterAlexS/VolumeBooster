@@ -4,9 +4,7 @@
   --text-color: #f5f5f5;
   --text-muted: #aaaaaa;
   --accent-color: #00ff88;
-  --accent-glow: rgba(0, 255, 136, 0.4);
   --extreme-color: #ff4757;
-  --extreme-glow: rgba(255, 71, 87, 0.4);
   --panel-bg: #2b2b36;
   --border-color: #444444;
   --btn-hover: #3b3b4a;
@@ -20,9 +18,7 @@ body.light-mode {
   --text-color: #222222;
   --text-muted: #666666;
   --accent-color: #00b35f;
-  --accent-glow: rgba(0, 179, 95, 0.4);
   --extreme-color: #e84118;
-  --extreme-glow: rgba(232, 65, 24, 0.4);
   --panel-bg: #ffffff;
   --border-color: #dddddd;
   --btn-hover: #eeeeee;
@@ -132,7 +128,7 @@ body {
 }
 
 /* Toggle Slider Knobs */
-.slider:before, .slider.round:before {
+.slider:before {
   position: absolute;
   content: "";
   height: 18px;
